@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83E89582864049C006EFC54 /* RPPrimaryButton.swift */; };
+		B83E895D28640652006EFC54 /* TodaysChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83E895B28640652006EFC54 /* TodaysChallengeCell.swift */; };
+		B83E895E28640652006EFC54 /* TodaysChallengeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83E895C28640652006EFC54 /* TodaysChallengeCell.xib */; };
+		B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83E895F2864066C006EFC54 /* ContinueLearningCell.swift */; };
+		B83E89622864066C006EFC54 /* ContinueLearningCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83E89602864066C006EFC54 /* ContinueLearningCell.xib */; };
 		B8B75C2A285CE7D200EA4D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B75C29285CE7D200EA4D4C /* AppDelegate.swift */; };
 		B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B75C2B285CE7D200EA4D4C /* SceneDelegate.swift */; };
 		B8B75C31285CE7D200EA4D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B75C2F285CE7D200EA4D4C /* Main.storyboard */; };
@@ -25,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B83E89582864049C006EFC54 /* RPPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPrimaryButton.swift; sourceTree = "<group>"; };
+		B83E895B28640652006EFC54 /* TodaysChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysChallengeCell.swift; sourceTree = "<group>"; };
+		B83E895C28640652006EFC54 /* TodaysChallengeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodaysChallengeCell.xib; sourceTree = "<group>"; };
+		B83E895F2864066C006EFC54 /* ContinueLearningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueLearningCell.swift; sourceTree = "<group>"; };
+		B83E89602864066C006EFC54 /* ContinueLearningCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContinueLearningCell.xib; sourceTree = "<group>"; };
 		B8B75C26285CE7D200EA4D4C /* Reprodukasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reprodukasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B75C29285CE7D200EA4D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8B75C2B285CE7D200EA4D4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +65,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B83E895728640482006EFC54 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B83E89582864049C006EFC54 /* RPPrimaryButton.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		B83E895A28640631006EFC54 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B83E895B28640652006EFC54 /* TodaysChallengeCell.swift */,
+				B83E895C28640652006EFC54 /* TodaysChallengeCell.xib */,
+				B83E895F2864066C006EFC54 /* ContinueLearningCell.swift */,
+				B83E89602864066C006EFC54 /* ContinueLearningCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B8B75C1D285CE7D200EA4D4C = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +118,7 @@
 		B8B75C40285CE7EF00EA4D4C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B83E895728640482006EFC54 /* Custom Views */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -141,6 +171,7 @@
 		B8CDAD3B286353D700200B68 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				B83E895A28640631006EFC54 /* Cells */,
 				B8CDAD402863544A00200B68 /* ProgressVC.swift */,
 				B8CDAD412863544A00200B68 /* ProgressVC.xib */,
 			);
@@ -232,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83E89622864066C006EFC54 /* ContinueLearningCell.xib in Resources */,
 				B8B75C39285CE7D300EA4D4C /* LaunchScreen.storyboard in Resources */,
 				B8CDAD432863544A00200B68 /* ProgressVC.xib in Resources */,
 				B8B75C36285CE7D300EA4D4C /* Assets.xcassets in Resources */,
@@ -239,6 +271,7 @@
 				B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */,
 				B8CDAD472863546800200B68 /* ChallengeVC.xib in Resources */,
 				B8B75C31285CE7D200EA4D4C /* Main.storyboard in Resources */,
+				B83E895E28640652006EFC54 /* TodaysChallengeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +286,13 @@
 				B8B75C34285CE7D200EA4D4C /* Reprodukasi.xcdatamodeld in Sources */,
 				B8B75C2A285CE7D200EA4D4C /* AppDelegate.swift in Sources */,
 				B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */,
+				B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */,
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
 				B8CDAD422863544A00200B68 /* ProgressVC.swift in Sources */,
+				B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */,
 				B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */,
+				B83E895D28640652006EFC54 /* TodaysChallengeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
