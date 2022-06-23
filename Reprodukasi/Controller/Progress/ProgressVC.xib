@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressVC" customModule="Reprodukasi" customModuleProvider="target">
             <connections>
+                <outlet property="progressTableView" destination="pKW-Og-oID" id="1IU-ci-hg5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zS-3s-7Yq">
-                    <rect key="frame" x="173" y="437.5" width="68" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pKW-Og-oID">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="7zS-3s-7Yq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="16O-iy-0vS"/>
-                <constraint firstItem="7zS-3s-7Yq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rqF-tg-mL7"/>
+                <constraint firstItem="pKW-Og-oID" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ai2-1F-Qy9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pKW-Og-oID" secondAttribute="bottom" id="XxH-XT-FKT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pKW-Og-oID" secondAttribute="trailing" id="oyU-56-efO"/>
+                <constraint firstItem="pKW-Og-oID" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qJC-ge-bm5"/>
             </constraints>
             <point key="canvasLocation" x="132" y="115"/>
         </view>
