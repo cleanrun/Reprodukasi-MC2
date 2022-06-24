@@ -38,6 +38,10 @@ class ProgressVC: UIViewController {
     }
     
     // MARK: - Custom Functions
+    private func routeToChallengeDetail() {
+        let vc = ChallengeDetailVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     // MARK: - Actions
 
@@ -83,7 +87,9 @@ extension ProgressVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // FIXME: Implement this soon
+        if indexPath.section == 0 {
+            routeToChallengeDetail()
+        }
     }
     
 }
