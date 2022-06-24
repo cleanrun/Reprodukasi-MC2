@@ -63,8 +63,11 @@ class ChallengeDetailVC: UIViewController {
             self.challengeActionButton.isUserInteractionEnabled = false
         })
         let noAction = UIAlertAction(title: "Tidak", style: .destructive)
-        alert.addAction(yesAction)
+        
         alert.addAction(noAction)
+        alert.addAction(yesAction)
+        
+        alert.preferredAction = yesAction
         present(alert, animated: true)
     }
     
