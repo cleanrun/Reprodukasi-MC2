@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DCD8228673B0900EBF414 /* StatisticsLearningProgressCell.swift */; };
+		B81DCD8528673B0900EBF414 /* StatisticsLearningProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81DCD8328673B0900EBF414 /* StatisticsLearningProgressCell.xib */; };
+		B81DCD8828673B2000EBF414 /* StatisticsChallengeProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DCD8628673B2000EBF414 /* StatisticsChallengeProgressCell.swift */; };
+		B81DCD8928673B2000EBF414 /* StatisticsChallengeProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81DCD8728673B2000EBF414 /* StatisticsChallengeProgressCell.xib */; };
+		B81DCD8C28673B3200EBF414 /* StatisticsAchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DCD8A28673B3100EBF414 /* StatisticsAchievementCell.swift */; };
+		B81DCD8D28673B3200EBF414 /* StatisticsAchievementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81DCD8B28673B3100EBF414 /* StatisticsAchievementCell.xib */; };
 		B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83E89582864049C006EFC54 /* RPPrimaryButton.swift */; };
 		B83E895D28640652006EFC54 /* TodaysChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83E895B28640652006EFC54 /* TodaysChallengeCell.swift */; };
 		B83E895E28640652006EFC54 /* TodaysChallengeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83E895C28640652006EFC54 /* TodaysChallengeCell.xib */; };
@@ -34,6 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81DCD8228673B0900EBF414 /* StatisticsLearningProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsLearningProgressCell.swift; sourceTree = "<group>"; };
+		B81DCD8328673B0900EBF414 /* StatisticsLearningProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsLearningProgressCell.xib; sourceTree = "<group>"; };
+		B81DCD8628673B2000EBF414 /* StatisticsChallengeProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsChallengeProgressCell.swift; sourceTree = "<group>"; };
+		B81DCD8728673B2000EBF414 /* StatisticsChallengeProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsChallengeProgressCell.xib; sourceTree = "<group>"; };
+		B81DCD8A28673B3100EBF414 /* StatisticsAchievementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsAchievementCell.swift; sourceTree = "<group>"; };
+		B81DCD8B28673B3100EBF414 /* StatisticsAchievementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsAchievementCell.xib; sourceTree = "<group>"; };
 		B83E89582864049C006EFC54 /* RPPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPrimaryButton.swift; sourceTree = "<group>"; };
 		B83E895B28640652006EFC54 /* TodaysChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysChallengeCell.swift; sourceTree = "<group>"; };
 		B83E895C28640652006EFC54 /* TodaysChallengeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodaysChallengeCell.xib; sourceTree = "<group>"; };
@@ -73,6 +85,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B81DCD8128673A5500EBF414 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B81DCD8228673B0900EBF414 /* StatisticsLearningProgressCell.swift */,
+				B81DCD8328673B0900EBF414 /* StatisticsLearningProgressCell.xib */,
+				B81DCD8628673B2000EBF414 /* StatisticsChallengeProgressCell.swift */,
+				B81DCD8728673B2000EBF414 /* StatisticsChallengeProgressCell.xib */,
+				B81DCD8A28673B3100EBF414 /* StatisticsAchievementCell.swift */,
+				B81DCD8B28673B3100EBF414 /* StatisticsAchievementCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B83E895728640482006EFC54 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +243,7 @@
 		B8CDAD3E2863540900200B68 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				B81DCD8128673A5500EBF414 /* Cells */,
 				B8CDAD482863547700200B68 /* StatisticsVC.swift */,
 				B8CDAD492863547700200B68 /* StatisticsVC.xib */,
 			);
@@ -293,9 +319,12 @@
 			files = (
 				B83E89622864066C006EFC54 /* ContinueLearningCell.xib in Resources */,
 				B8B75C39285CE7D300EA4D4C /* LaunchScreen.storyboard in Resources */,
+				B81DCD8D28673B3200EBF414 /* StatisticsAchievementCell.xib in Resources */,
 				B8CDAD432863544A00200B68 /* ProgressVC.xib in Resources */,
+				B81DCD8928673B2000EBF414 /* StatisticsChallengeProgressCell.xib in Resources */,
 				B8B75C36285CE7D300EA4D4C /* Assets.xcassets in Resources */,
 				B8CDAD4F2863548100200B68 /* MaterialsVC.xib in Resources */,
+				B81DCD8528673B0900EBF414 /* StatisticsLearningProgressCell.xib in Resources */,
 				B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */,
 				B8CDAD472863546800200B68 /* ChallengeVC.xib in Resources */,
 				B85273C0286549240009EA22 /* ChallengeDetailVC.xib in Resources */,
@@ -314,10 +343,13 @@
 				B8CDAD462863546800200B68 /* ChallengeVC.swift in Sources */,
 				B8B75C34285CE7D200EA4D4C /* Reprodukasi.xcdatamodeld in Sources */,
 				B85273BF286549240009EA22 /* ChallengeDetailVC.swift in Sources */,
+				B81DCD8828673B2000EBF414 /* StatisticsChallengeProgressCell.swift in Sources */,
 				B8B75C2A285CE7D200EA4D4C /* AppDelegate.swift in Sources */,
+				B81DCD8C28673B3200EBF414 /* StatisticsAchievementCell.swift in Sources */,
 				B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */,
 				B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */,
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
+				B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */,
 				B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */,
 				B83E896528641211006EFC54 /* UIView+Extension.swift in Sources */,
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
