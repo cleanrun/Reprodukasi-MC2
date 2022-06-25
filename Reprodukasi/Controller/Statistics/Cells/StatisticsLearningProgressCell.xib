@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatisticsLearningProgressCell" rowHeight="160" id="KGk-i7-Jjw" customClass="StatisticsLearningProgressCell" customModule="Reprodukasi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Pembelajaran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UL-9C-3u4">
+                        <rect key="frame" x="24" y="8" width="272" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRN-sl-AZS">
+                        <rect key="frame" x="24" y="40" width="272" height="112"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qfF-dn-eNq">
+                                <rect key="frame" x="12" y="21.5" width="70" height="69"/>
+                                <color key="tintColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="6xy-Rz-k6r"/>
+                                    <constraint firstAttribute="height" constant="70" id="ZaP-CF-Tko"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Nip-nt-bR2">
+                                <rect key="frame" x="90" y="33.5" width="166" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progres Pembelajaran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8r-TV-k8k">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50% terselesaikan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="902-Zu-koc">
+                                        <rect key="frame" x="0.0" y="18" width="166" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4mj-xM-0Jf">
+                                        <rect key="frame" x="0.0" y="41" width="166" height="4"/>
+                                        <color key="progressTintColor" name="PrimaryRed"/>
+                                    </progressView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nip-nt-bR2" firstAttribute="centerY" secondItem="KRN-sl-AZS" secondAttribute="centerY" id="O97-0l-WN2"/>
+                            <constraint firstItem="qfF-dn-eNq" firstAttribute="leading" secondItem="KRN-sl-AZS" secondAttribute="leading" constant="12" id="a01-as-63e"/>
+                            <constraint firstItem="qfF-dn-eNq" firstAttribute="centerY" secondItem="KRN-sl-AZS" secondAttribute="centerY" id="abQ-kd-gVB"/>
+                            <constraint firstAttribute="trailing" secondItem="Nip-nt-bR2" secondAttribute="trailing" constant="16" id="m3s-iY-81R"/>
+                            <constraint firstItem="Nip-nt-bR2" firstAttribute="leading" secondItem="qfF-dn-eNq" secondAttribute="trailing" constant="8" id="ttU-rT-kL5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0UL-9C-3u4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0gI-hV-1e5"/>
+                    <constraint firstAttribute="trailing" secondItem="KRN-sl-AZS" secondAttribute="trailing" constant="24" id="9gK-Nt-hFn"/>
+                    <constraint firstAttribute="trailing" secondItem="0UL-9C-3u4" secondAttribute="trailing" constant="24" id="Aa1-b2-3bL"/>
+                    <constraint firstAttribute="bottom" secondItem="KRN-sl-AZS" secondAttribute="bottom" constant="8" id="NkW-Lz-e62"/>
+                    <constraint firstItem="0UL-9C-3u4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="oPj-0P-9lK"/>
+                    <constraint firstItem="KRN-sl-AZS" firstAttribute="top" secondItem="0UL-9C-3u4" secondAttribute="bottom" constant="8" id="q9F-Xr-dnx"/>
+                    <constraint firstItem="KRN-sl-AZS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="wPe-Wz-pFA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="KRN-sl-AZS" id="BeD-W1-Hfd"/>
+                <outlet property="learningProgressDescriptionLabel" destination="902-Zu-koc" id="HKf-9i-ace"/>
+                <outlet property="learningProgressView" destination="4mj-xM-0Jf" id="FPN-3L-n7e"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="114"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="book.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="PrimaryRed">
+            <color red="0.85900002717971802" green="0.22699999809265137" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
