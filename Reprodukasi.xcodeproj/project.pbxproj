@@ -22,6 +22,9 @@
 		B85273BF286549240009EA22 /* ChallengeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85273BD286549240009EA22 /* ChallengeDetailVC.swift */; };
 		B85273C0286549240009EA22 /* ChallengeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85273BE286549240009EA22 /* ChallengeDetailVC.xib */; };
 		B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85273C128654C4D0009EA22 /* UIColor+Extension.swift */; };
+		B869E0CD286B3B38008033CE /* ChallengeHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0CC286B3B38008033CE /* ChallengeHistoryVC.swift */; };
+		B869E0D1286B3C04008033CE /* ChallengeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0CF286B3C04008033CE /* ChallengeHistoryCell.swift */; };
+		B869E0D2286B3C04008033CE /* ChallengeHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B869E0D0286B3C04008033CE /* ChallengeHistoryCell.xib */; };
 		B8B75C2A285CE7D200EA4D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B75C29285CE7D200EA4D4C /* AppDelegate.swift */; };
 		B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B75C2B285CE7D200EA4D4C /* SceneDelegate.swift */; };
 		B8B75C31285CE7D200EA4D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B75C2F285CE7D200EA4D4C /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		B85273BD286549240009EA22 /* ChallengeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailVC.swift; sourceTree = "<group>"; };
 		B85273BE286549240009EA22 /* ChallengeDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallengeDetailVC.xib; sourceTree = "<group>"; };
 		B85273C128654C4D0009EA22 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B869E0CC286B3B38008033CE /* ChallengeHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeHistoryVC.swift; sourceTree = "<group>"; };
+		B869E0CF286B3C04008033CE /* ChallengeHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeHistoryCell.swift; sourceTree = "<group>"; };
+		B869E0D0286B3C04008033CE /* ChallengeHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallengeHistoryCell.xib; sourceTree = "<group>"; };
 		B8B75C26285CE7D200EA4D4C /* Reprodukasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reprodukasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B75C29285CE7D200EA4D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8B75C2B285CE7D200EA4D4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +139,24 @@
 				B85273BE286549240009EA22 /* ChallengeDetailVC.xib */,
 			);
 			path = "Challenge Detail";
+			sourceTree = "<group>";
+		};
+		B869E0C7286B3B00008033CE /* Challenge History */ = {
+			isa = PBXGroup;
+			children = (
+				B869E0CE286B3BEA008033CE /* Cells */,
+				B869E0CC286B3B38008033CE /* ChallengeHistoryVC.swift */,
+			);
+			path = "Challenge History";
+			sourceTree = "<group>";
+		};
+		B869E0CE286B3BEA008033CE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B869E0CF286B3C04008033CE /* ChallengeHistoryCell.swift */,
+				B869E0D0286B3C04008033CE /* ChallengeHistoryCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B8B75C1D285CE7D200EA4D4C = {
@@ -243,6 +267,7 @@
 		B8CDAD3E2863540900200B68 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				B869E0C7286B3B00008033CE /* Challenge History */,
 				B81DCD8128673A5500EBF414 /* Cells */,
 				B8CDAD482863547700200B68 /* StatisticsVC.swift */,
 				B8CDAD492863547700200B68 /* StatisticsVC.xib */,
@@ -327,6 +352,7 @@
 				B81DCD8528673B0900EBF414 /* StatisticsLearningProgressCell.xib in Resources */,
 				B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */,
 				B8CDAD472863546800200B68 /* ChallengeVC.xib in Resources */,
+				B869E0D2286B3C04008033CE /* ChallengeHistoryCell.xib in Resources */,
 				B85273C0286549240009EA22 /* ChallengeDetailVC.xib in Resources */,
 				B8B75C31285CE7D200EA4D4C /* Main.storyboard in Resources */,
 				B83E895E28640652006EFC54 /* TodaysChallengeCell.xib in Resources */,
@@ -351,6 +377,8 @@
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
 				B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */,
 				B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */,
+				B869E0D1286B3C04008033CE /* ChallengeHistoryCell.swift in Sources */,
+				B869E0CD286B3B38008033CE /* ChallengeHistoryVC.swift in Sources */,
 				B83E896528641211006EFC54 /* UIView+Extension.swift in Sources */,
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
 				B8CDAD422863544A00200B68 /* ProgressVC.swift in Sources */,
