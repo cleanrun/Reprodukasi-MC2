@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ChallengeHistoryCell" customModule="Reprodukasi" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChallengeHistoryCell" rowHeight="120" id="KGk-i7-Jjw" customClass="ChallengeHistoryCell" customModule="Reprodukasi" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -29,19 +29,19 @@
                                     <constraint firstAttribute="width" constant="50" id="mgI-X9-GO0"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="978-6e-uDA">
-                                <rect key="frame" x="74" y="8" width="284" height="92"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="978-6e-uDA">
+                                <rect key="frame" x="82" y="16" width="276" height="76"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tantangan 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9m-fC-GLU">
-                                        <rect key="frame" x="0.0" y="0.0" width="284" height="63.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tantangan 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9m-fC-GLU">
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-ts-iDQ">
-                                        <rect key="frame" x="0.0" y="71.5" width="284" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam tellus non libero tristique porta." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-ts-iDQ">
+                                        <rect key="frame" x="0.0" y="25.5" width="276" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -51,10 +51,10 @@
                         <constraints>
                             <constraint firstItem="RCM-wy-yEp" firstAttribute="leading" secondItem="Zp5-Wp-w0G" secondAttribute="leading" constant="16" id="3Gt-CX-SWM"/>
                             <constraint firstAttribute="trailing" secondItem="978-6e-uDA" secondAttribute="trailing" constant="8" id="GwZ-pR-7xR"/>
-                            <constraint firstItem="978-6e-uDA" firstAttribute="leading" secondItem="RCM-wy-yEp" secondAttribute="trailing" constant="8" id="LAC-YR-mdr"/>
-                            <constraint firstAttribute="bottom" secondItem="978-6e-uDA" secondAttribute="bottom" constant="8" id="dd6-QG-ZrV"/>
+                            <constraint firstItem="978-6e-uDA" firstAttribute="leading" secondItem="RCM-wy-yEp" secondAttribute="trailing" constant="16" id="LAC-YR-mdr"/>
+                            <constraint firstAttribute="bottom" secondItem="978-6e-uDA" secondAttribute="bottom" constant="16" id="dd6-QG-ZrV"/>
                             <constraint firstItem="RCM-wy-yEp" firstAttribute="top" secondItem="Zp5-Wp-w0G" secondAttribute="top" constant="16" id="od0-pi-QoK"/>
-                            <constraint firstItem="978-6e-uDA" firstAttribute="top" secondItem="Zp5-Wp-w0G" secondAttribute="top" constant="8" id="y4N-KG-UXQ"/>
+                            <constraint firstItem="978-6e-uDA" firstAttribute="top" secondItem="Zp5-Wp-w0G" secondAttribute="top" constant="16" id="y4N-KG-UXQ"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -66,13 +66,19 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="challengeDescriptionLabel" destination="2O1-ts-iDQ" id="hKa-gW-4GJ"/>
+                <outlet property="challengeStatusImage" destination="RCM-wy-yEp" id="Mmx-vZ-UtJ"/>
+                <outlet property="challengeTitleLabel" destination="g9m-fC-GLU" id="ehr-gP-EJQ"/>
+                <outlet property="containerView" destination="Zp5-Wp-w0G" id="AC3-Ve-uxW"/>
+            </connections>
             <point key="canvasLocation" x="132" y="130"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="Success">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20399999618530273" green="0.77999997138977051" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
