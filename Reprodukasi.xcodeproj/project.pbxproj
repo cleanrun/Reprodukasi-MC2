@@ -278,6 +278,8 @@
 		B8CDAD3F2863540E00200B68 /* Materials */ = {
 			isa = PBXGroup;
 			children = (
+				B869E0D3286B40FC008033CE /* MaterialCells */,
+				B869E0D6286B40FC008033CE /* MaterialModel */,
 				B8CDAD4C2863548100200B68 /* MaterialsVC.swift */,
 				B8CDAD4D2863548100200B68 /* MaterialsVC.xib */,
 			);
@@ -347,6 +349,7 @@
 				B81DCD8D28673B3200EBF414 /* StatisticsAchievementCell.xib in Resources */,
 				B8CDAD432863544A00200B68 /* ProgressVC.xib in Resources */,
 				B81DCD8928673B2000EBF414 /* StatisticsChallengeProgressCell.xib in Resources */,
+				B869E0DA286B40FC008033CE /* MaterialListCell.xib in Resources */,
 				B8B75C36285CE7D300EA4D4C /* Assets.xcassets in Resources */,
 				B8CDAD4F2863548100200B68 /* MaterialsVC.xib in Resources */,
 				B81DCD8528673B0900EBF414 /* StatisticsLearningProgressCell.xib in Resources */,
@@ -368,6 +371,7 @@
 			files = (
 				B8CDAD462863546800200B68 /* ChallengeVC.swift in Sources */,
 				B8B75C34285CE7D200EA4D4C /* Reprodukasi.xcdatamodeld in Sources */,
+				B869E0DC286B40FC008033CE /* MaterialData.swift in Sources */,
 				B85273BF286549240009EA22 /* ChallengeDetailVC.swift in Sources */,
 				B81DCD8828673B2000EBF414 /* StatisticsChallengeProgressCell.swift in Sources */,
 				B8B75C2A285CE7D200EA4D4C /* AppDelegate.swift in Sources */,
@@ -376,12 +380,14 @@
 				B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */,
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
 				B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */,
+				B869E0DB286B40FC008033CE /* MaterialModel.swift in Sources */,
 				B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */,
 				B869E0D1286B3C04008033CE /* ChallengeHistoryCell.swift in Sources */,
 				B869E0CD286B3B38008033CE /* ChallengeHistoryVC.swift in Sources */,
 				B83E896528641211006EFC54 /* UIView+Extension.swift in Sources */,
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
 				B8CDAD422863544A00200B68 /* ProgressVC.swift in Sources */,
+				B869E0D9286B40FC008033CE /* MaterialListCell.swift in Sources */,
 				B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */,
 				B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */,
 				B83E895D28640652006EFC54 /* TodaysChallengeCell.swift in Sources */,
