@@ -25,10 +25,6 @@
 		B869E0CD286B3B38008033CE /* ChallengeHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0CC286B3B38008033CE /* ChallengeHistoryVC.swift */; };
 		B869E0D1286B3C04008033CE /* ChallengeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0CF286B3C04008033CE /* ChallengeHistoryCell.swift */; };
 		B869E0D2286B3C04008033CE /* ChallengeHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B869E0D0286B3C04008033CE /* ChallengeHistoryCell.xib */; };
-		B869E0D9286B40FC008033CE /* MaterialListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0D4286B40FC008033CE /* MaterialListCell.swift */; };
-		B869E0DA286B40FC008033CE /* MaterialListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B869E0D5286B40FC008033CE /* MaterialListCell.xib */; };
-		B869E0DB286B40FC008033CE /* MaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0D7286B40FC008033CE /* MaterialModel.swift */; };
-		B869E0DC286B40FC008033CE /* MaterialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0D8286B40FC008033CE /* MaterialData.swift */; };
 		B8B75C2A285CE7D200EA4D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B75C29285CE7D200EA4D4C /* AppDelegate.swift */; };
 		B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B75C2B285CE7D200EA4D4C /* SceneDelegate.swift */; };
 		B8B75C31285CE7D200EA4D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B75C2F285CE7D200EA4D4C /* Main.storyboard */; };
@@ -65,10 +61,6 @@
 		B869E0CC286B3B38008033CE /* ChallengeHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeHistoryVC.swift; sourceTree = "<group>"; };
 		B869E0CF286B3C04008033CE /* ChallengeHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeHistoryCell.swift; sourceTree = "<group>"; };
 		B869E0D0286B3C04008033CE /* ChallengeHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallengeHistoryCell.xib; sourceTree = "<group>"; };
-		B869E0D4286B40FC008033CE /* MaterialListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialListCell.swift; sourceTree = "<group>"; };
-		B869E0D5286B40FC008033CE /* MaterialListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaterialListCell.xib; sourceTree = "<group>"; };
-		B869E0D7286B40FC008033CE /* MaterialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialModel.swift; sourceTree = "<group>"; };
-		B869E0D8286B40FC008033CE /* MaterialData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialData.swift; sourceTree = "<group>"; };
 		B8B75C26285CE7D200EA4D4C /* Reprodukasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reprodukasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B75C29285CE7D200EA4D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8B75C2B285CE7D200EA4D4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,24 +157,6 @@
 				B869E0D0286B3C04008033CE /* ChallengeHistoryCell.xib */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		B869E0D3286B40FC008033CE /* MaterialCells */ = {
-			isa = PBXGroup;
-			children = (
-				B869E0D4286B40FC008033CE /* MaterialListCell.swift */,
-				B869E0D5286B40FC008033CE /* MaterialListCell.xib */,
-			);
-			path = MaterialCells;
-			sourceTree = "<group>";
-		};
-		B869E0D6286B40FC008033CE /* MaterialModel */ = {
-			isa = PBXGroup;
-			children = (
-				B869E0D7286B40FC008033CE /* MaterialModel.swift */,
-				B869E0D8286B40FC008033CE /* MaterialData.swift */,
-			);
-			path = MaterialModel;
 			sourceTree = "<group>";
 		};
 		B8B75C1D285CE7D200EA4D4C = {
