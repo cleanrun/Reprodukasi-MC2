@@ -39,6 +39,10 @@ class StatisticsVC: UIViewController {
     }
     
     // MARK: - Custom Functions
+    private func routeToChallengeHistory() {
+        let vc = ChallengeHistoryVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
@@ -82,6 +86,13 @@ extension StatisticsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // FIXME: Implement this soon
+        switch indexPath.section {
+        case 1:
+            routeToChallengeHistory()
+        case 2:
+            break
+        default:
+            break
+        }
     }
 }
