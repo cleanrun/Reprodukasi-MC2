@@ -30,6 +30,9 @@ class ProgressVC: UIViewController {
     
     // MARK: - UI Setups
     private func setupUI() {
+        title = "Progress"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         progressTableView.delegate = self
         progressTableView.dataSource = self
         progressTableView.separatorStyle = .none
@@ -38,9 +41,8 @@ class ProgressVC: UIViewController {
     }
     
     // MARK: - Custom Functions
-    private func routeToChallengeDetail() {
-        let vc = ChallengeDetailVC()
-        navigationController?.pushViewController(vc, animated: true)
+    private func switchToChallengeTab() {
+        tabBarController?.selectedIndex = 2
     }
     
     // MARK: - Actions
@@ -88,7 +90,7 @@ extension ProgressVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            routeToChallengeDetail()
+            switchToChallengeTab()
         }
     }
     
