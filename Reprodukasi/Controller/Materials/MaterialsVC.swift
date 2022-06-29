@@ -27,7 +27,7 @@ class MaterialsVC: UIViewController, UINavigationBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        navigationController?.navigationBar.delegate = self
+        //navigationController?.navigationBar.delegate = self
         navigationController?.navigationItem.title = "Coba"
         navigationController?.navigationBar.prefersLargeTitles = true
       

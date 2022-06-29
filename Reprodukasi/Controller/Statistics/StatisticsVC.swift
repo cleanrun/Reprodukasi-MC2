@@ -30,6 +30,9 @@ class StatisticsVC: UIViewController {
     
     // MARK: - UI Setups
     private func setupTableView() {
+        title = "Statistik"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -41,6 +44,11 @@ class StatisticsVC: UIViewController {
     // MARK: - Custom Functions
     private func routeToChallengeHistory() {
         let vc = ChallengeHistoryVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func routeToAchievement() {
+        let vc = AchievementVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -90,7 +98,7 @@ extension StatisticsVC: UITableViewDelegate, UITableViewDataSource {
         case 1:
             routeToChallengeHistory()
         case 2:
-            break
+            routeToAchievement()
         default:
             break
         }

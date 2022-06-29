@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchievementVC" customModule="Reprodukasi" customModuleProvider="target">
+            <connections>
+                <outlet property="achievementCollectionView" destination="NcL-3W-mwF" id="y8K-cE-GZV"/>
+                <outlet property="achievementProgressLabel" destination="8co-Iz-B4C" id="wNe-CL-h9C"/>
+                <outlet property="achievementProgressView" destination="ecq-nR-VET" id="oFk-Dh-f3V"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-yE-ED1">
+                    <rect key="frame" x="0.0" y="44" width="414" height="71.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 dari 10 tercapai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8co-Iz-B4C">
+                            <rect key="frame" x="24" y="16" width="366" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="ecq-nR-VET">
+                            <rect key="frame" x="24" y="51.5" width="366" height="4"/>
+                            <color key="progressTintColor" name="PrimaryRed"/>
+                        </progressView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ecq-nR-VET" firstAttribute="leading" secondItem="Vk4-yE-ED1" secondAttribute="leading" constant="24" id="8bP-1p-RSb"/>
+                        <constraint firstAttribute="trailing" secondItem="ecq-nR-VET" secondAttribute="trailing" constant="24" id="LJN-aO-ZQv"/>
+                        <constraint firstItem="ecq-nR-VET" firstAttribute="top" secondItem="8co-Iz-B4C" secondAttribute="bottom" constant="16" id="Nbp-JE-kb6"/>
+                        <constraint firstItem="8co-Iz-B4C" firstAttribute="leading" secondItem="Vk4-yE-ED1" secondAttribute="leading" constant="24" id="Of4-Lm-cQC"/>
+                        <constraint firstAttribute="trailing" secondItem="8co-Iz-B4C" secondAttribute="trailing" constant="24" id="POR-vi-org"/>
+                        <constraint firstAttribute="bottom" secondItem="ecq-nR-VET" secondAttribute="bottom" constant="16" id="axQ-2a-dtg"/>
+                        <constraint firstItem="8co-Iz-B4C" firstAttribute="top" secondItem="Vk4-yE-ED1" secondAttribute="top" constant="16" id="tId-0O-BDS"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NcL-3W-mwF">
+                    <rect key="frame" x="0.0" y="115.5" width="414" height="746.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a8p-6K-lJ8">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NcL-3W-mwF" firstAttribute="top" secondItem="Vk4-yE-ED1" secondAttribute="bottom" id="AT3-ud-v8Z"/>
+                <constraint firstItem="NcL-3W-mwF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="I29-Qj-lNp"/>
+                <constraint firstItem="Vk4-yE-ED1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SQ1-p6-ral"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NcL-3W-mwF" secondAttribute="trailing" id="Vk5-Sh-yCD"/>
+                <constraint firstItem="Vk4-yE-ED1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="j9L-73-C79"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NcL-3W-mwF" secondAttribute="bottom" id="lyc-Sm-elk"/>
+                <constraint firstItem="Vk4-yE-ED1" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="u9N-zO-Sli"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryRed">
+            <color red="0.85900002717971802" green="0.22699999809265137" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
