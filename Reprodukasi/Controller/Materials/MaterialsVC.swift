@@ -12,9 +12,9 @@ class MaterialsVC: UIViewController, UINavigationBarDelegate {
     
     @IBOutlet weak var materiTableView: UITableView!
    
-//    var arrMaterial: [MaterialModel] = []
+
     var data : Root = Root(section: [])
-//    var data2: [MaterialModel] = []
+
     
     init() {
         super.init(nibName: "MaterialsVC", bundle: nil)
