@@ -44,6 +44,11 @@
 		B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD492863547700200B68 /* StatisticsVC.xib */; };
 		B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDAD4C2863548100200B68 /* MaterialsVC.swift */; };
 		B8CDAD4F2863548100200B68 /* MaterialsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD4D2863548100200B68 /* MaterialsVC.xib */; };
+		B8E71A90286E941C0075A4ED /* AchievementListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71A8E286E941C0075A4ED /* AchievementListCell.swift */; };
+		B8E71A91286E941C0075A4ED /* AchievementListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E71A8F286E941C0075A4ED /* AchievementListCell.xib */; };
+		B8E71A97286E9DC50075A4ED /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */; };
+		B8E71A9B286EA3620075A4ED /* AchievementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71A99286EA3620075A4ED /* AchievementDetailVC.swift */; };
+		B8E71A9C286EA3620075A4ED /* AchievementDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E71A9A286EA3620075A4ED /* AchievementDetailVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +91,11 @@
 		B8CDAD492863547700200B68 /* StatisticsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsVC.xib; sourceTree = "<group>"; };
 		B8CDAD4C2863548100200B68 /* MaterialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialsVC.swift; sourceTree = "<group>"; };
 		B8CDAD4D2863548100200B68 /* MaterialsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialsVC.xib; sourceTree = "<group>"; };
+		B8E71A8E286E941C0075A4ED /* AchievementListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementListCell.swift; sourceTree = "<group>"; };
+		B8E71A8F286E941C0075A4ED /* AchievementListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementListCell.xib; sourceTree = "<group>"; };
+		B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		B8E71A99286EA3620075A4ED /* AchievementDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailVC.swift; sourceTree = "<group>"; };
+		B8E71A9A286EA3620075A4ED /* AchievementDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementDetailVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +134,7 @@
 		B83E895728640482006EFC54 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */,
 				B83E89582864049C006EFC54 /* RPPrimaryButton.swift */,
 			);
 			path = "Custom Views";
@@ -312,6 +323,24 @@
 			path = Materials;
 			sourceTree = "<group>";
 		};
+		B8E71A8D286E92AD0075A4ED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B8E71A8E286E941C0075A4ED /* AchievementListCell.swift */,
+				B8E71A8F286E941C0075A4ED /* AchievementListCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B8E71A98286EA34C0075A4ED /* Achievement Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B8E71A99286EA3620075A4ED /* AchievementDetailVC.swift */,
+				B8E71A9A286EA3620075A4ED /* AchievementDetailVC.xib */,
+			);
+			path = "Achievement Detail";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B83E89622864066C006EFC54 /* ContinueLearningCell.xib in Resources */,
+				B8E71A9C286EA3620075A4ED /* AchievementDetailVC.xib in Resources */,
 				B8B75C39285CE7D300EA4D4C /* LaunchScreen.storyboard in Resources */,
 				B81F2604286CA4D70026E532 /* AchievementVC.xib in Resources */,
 				B81DCD8D28673B3200EBF414 /* StatisticsAchievementCell.xib in Resources */,
@@ -384,6 +414,7 @@
 				B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */,
 				B869E0D2286B3C04008033CE /* ChallengeHistoryCell.xib in Resources */,
 				B85273C0286549240009EA22 /* ChallengeDetailVC.xib in Resources */,
+				B8E71A91286E941C0075A4ED /* AchievementListCell.xib in Resources */,
 				B8B75C31285CE7D200EA4D4C /* Main.storyboard in Resources */,
 				B83E895E28640652006EFC54 /* TodaysChallengeCell.xib in Resources */,
 			);
@@ -397,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8B75C34285CE7D200EA4D4C /* Reprodukasi.xcdatamodeld in Sources */,
+				B8E71A90286E941C0075A4ED /* AchievementListCell.swift in Sources */,
 				B869E0E8286B42C2008033CE /* MaterialData.swift in Sources */,
 				B81F2603286CA4D70026E532 /* AchievementVC.swift in Sources */,
 				B85273BF286549240009EA22 /* ChallengeDetailVC.swift in Sources */,
@@ -406,7 +438,9 @@
 				B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */,
 				B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */,
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
+				B8E71A97286E9DC50075A4ED /* CollectionHeaderView.swift in Sources */,
 				B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */,
+				B8E71A9B286EA3620075A4ED /* AchievementDetailVC.swift in Sources */,
 				B869E0E7286B42C2008033CE /* MaterialModel.swift in Sources */,
 				B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */,
 				B869E0D1286B3C04008033CE /* ChallengeHistoryCell.swift in Sources */,

@@ -36,7 +36,6 @@ class StatisticsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "StatisticsLearningProgressCell", bundle: nil), forCellReuseIdentifier: "StatisticsLearningProgressCell")
         tableView.register(UINib(nibName: "StatisticsChallengeProgressCell", bundle: nil), forCellReuseIdentifier: "StatisticsChallengeProgressCell")
         tableView.register(UINib(nibName: "StatisticsAchievementCell", bundle: nil), forCellReuseIdentifier: "StatisticsAchievementCell")
     }
@@ -57,7 +56,7 @@ class StatisticsVC: UIViewController {
 // MARK: - Table View delegate and data source
 extension StatisticsVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,11 +64,7 @@ extension StatisticsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsLearningProgressCell") as! StatisticsLearningProgressCell
-            cell.selectionStyle = .none
-            return cell
-        } else if indexPath.section == 1{
+        if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsChallengeProgressCell") as! StatisticsChallengeProgressCell
             cell.selectionStyle = .none
             return cell
@@ -83,10 +78,8 @@ extension StatisticsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return StatisticsLearningProgressCell.DEFAULT_HEIGHT
-        case 1:
             return StatisticsChallengeProgressCell.DEFAULT_HEIGHT
-        case 2:
+        case 1:
             return StatisticsAchievementCell.DEFAULT_HEIGHT
         default:
             return 0
@@ -95,9 +88,9 @@ extension StatisticsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
-        case 1:
+        case 0:
             routeToChallengeHistory()
-        case 2:
+        case 1:
             routeToAchievement()
         default:
             break
