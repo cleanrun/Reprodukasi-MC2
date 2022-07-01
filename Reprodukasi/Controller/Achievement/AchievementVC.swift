@@ -98,4 +98,5 @@ extension AchievementVC: UICollectionViewDelegate, UICollectionViewDelegateFlowL
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         routeToAchievementDetail()
+    }
 }
