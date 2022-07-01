@@ -40,7 +40,7 @@ class ChallengeHistoryVC: UITableViewController {
     private func setupUI() {
         title = "Riwayat Tantangan"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, image: UIImage(systemName: "line.3.horizontal.decrease.circle"), primaryAction: nil, menu: filterMenu)
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, image: UIImage(systemName: "line.3.horizontal.decrease.circle"), primaryAction: nil, menu: filterMenu)
         
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "ChallengeHistoryCell", bundle: nil), forCellReuseIdentifier: String(describing: "ChallengeHistoryCell"))

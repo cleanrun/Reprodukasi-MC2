@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AchievementListCell" id="gTV-IL-0wX" customClass="AchievementListCell" customModule="Reprodukasi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxA-y3-bs0">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xMX-Wy-JFh">
+                                <rect key="frame" x="0.0" y="12" width="100" height="76.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_achievement_disabled" translatesAutoresizingMaskIntoConstraints="NO" id="TGF-hh-9Xz">
+                                        <rect key="frame" x="20" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="26D-Di-f4j"/>
+                                            <constraint firstAttribute="height" constant="60" id="SNh-gH-N4T"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR5-lV-Xrm">
+                                        <rect key="frame" x="16" y="63" width="68" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xMX-Wy-JFh" firstAttribute="leading" secondItem="ZxA-y3-bs0" secondAttribute="leading" id="4Wh-ZX-mo7"/>
+                            <constraint firstItem="xMX-Wy-JFh" firstAttribute="centerY" secondItem="ZxA-y3-bs0" secondAttribute="centerY" id="UKE-uF-vcF"/>
+                            <constraint firstAttribute="trailing" secondItem="xMX-Wy-JFh" secondAttribute="trailing" id="Zij-Wk-Hnc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZxA-y3-bs0" secondAttribute="trailing" id="UcT-nC-UGN"/>
+                <constraint firstAttribute="bottom" secondItem="ZxA-y3-bs0" secondAttribute="bottom" id="asd-Sn-p54"/>
+                <constraint firstItem="ZxA-y3-bs0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eQV-eg-TH2"/>
+                <constraint firstItem="ZxA-y3-bs0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jCv-h2-cvh"/>
+            </constraints>
+            <connections>
+                <outlet property="achievementImage" destination="TGF-hh-9Xz" id="I7A-W6-X3D"/>
+                <outlet property="achievementLabel" destination="GR5-lV-Xrm" id="xtW-MD-lSC"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="130"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_achievement_disabled" width="81" height="81"/>
+    </resources>
+</document>
