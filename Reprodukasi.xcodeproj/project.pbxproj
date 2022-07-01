@@ -38,6 +38,8 @@
 		B8CDAD432863544A00200B68 /* ProgressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD412863544A00200B68 /* ProgressVC.xib */; };
 		B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDAD482863547700200B68 /* StatisticsVC.swift */; };
 		B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD492863547700200B68 /* StatisticsVC.xib */; };
+		B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDAD4C2863548100200B68 /* MaterialsVC.swift */; };
+		B8CDAD4F2863548100200B68 /* MaterialsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD4D2863548100200B68 /* MaterialsVC.xib */; };
 		B8E71A97286E9DC50075A4ED /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */; };
 		B8E71AAF286EAD3B0075A4ED /* AchievementDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E71AAD286EAD3B0075A4ED /* AchievementDetailVC.xib */; };
 		B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */; };
@@ -79,6 +81,8 @@
 		B8CDAD412863544A00200B68 /* ProgressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressVC.xib; sourceTree = "<group>"; };
 		B8CDAD482863547700200B68 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		B8CDAD492863547700200B68 /* StatisticsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsVC.xib; sourceTree = "<group>"; };
+		B8CDAD4C2863548100200B68 /* MaterialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialsVC.swift; sourceTree = "<group>"; };
+		B8CDAD4D2863548100200B68 /* MaterialsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialsVC.xib; sourceTree = "<group>"; };
 		B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		B8E71AAD286EAD3B0075A4ED /* AchievementDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementDetailVC.xib; sourceTree = "<group>"; };
 		B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementDetailVC.swift; sourceTree = "<group>"; };
@@ -301,6 +305,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B8E71AAC286EAD3B0075A4ED /* Achievement Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B8E71AAD286EAD3B0075A4ED /* AchievementDetailVC.xib */,
+				B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */,
+			);
+			path = "Achievement Detail";
+			sourceTree = "<group>";
+		};
+		B8E71AB1286EAD4F0075A4ED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B8E71AB2286EAD4F0075A4ED /* AchievementListCell.xib */,
+				B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,7 +425,9 @@
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
 				B8CDAD422863544A00200B68 /* ProgressVC.swift in Sources */,
 				B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */,
+				B869E0E5286B42C2008033CE /* MaterialListCell.swift in Sources */,
 				B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */,
+				B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */,
 				B8E71AB5286EAD4F0075A4ED /* AchievementListCell.swift in Sources */,
 				B83E895D28640652006EFC54 /* TodaysChallengeCell.swift in Sources */,
 			);
