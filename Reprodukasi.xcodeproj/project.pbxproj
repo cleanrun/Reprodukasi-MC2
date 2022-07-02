@@ -49,6 +49,10 @@
 		B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */; };
 		B8E71AB4286EAD4F0075A4ED /* AchievementListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E71AB2286EAD4F0075A4ED /* AchievementListCell.xib */; };
 		B8E71AB5286EAD4F0075A4ED /* AchievementListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */; };
+		CB415CCF2870A0FF00682EEC /* OnBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB415CCA2870A0FF00682EEC /* OnBoardVC.swift */; };
+		CB415CD02870A0FF00682EEC /* OnBoardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB415CCB2870A0FF00682EEC /* OnBoardVC.xib */; };
+		CB415CD12870A0FF00682EEC /* OnBoardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB415CCD2870A0FF00682EEC /* OnBoardData.swift */; };
+		CB415CD22870A0FF00682EEC /* OnBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB415CCE2870A0FF00682EEC /* OnBoardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +100,10 @@
 		B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementDetailVC.swift; sourceTree = "<group>"; };
 		B8E71AB2286EAD4F0075A4ED /* AchievementListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementListCell.xib; sourceTree = "<group>"; };
 		B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementListCell.swift; sourceTree = "<group>"; };
+		CB415CCA2870A0FF00682EEC /* OnBoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardVC.swift; sourceTree = "<group>"; };
+		CB415CCB2870A0FF00682EEC /* OnBoardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnBoardVC.xib; sourceTree = "<group>"; };
+		CB415CCD2870A0FF00682EEC /* OnBoardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardData.swift; sourceTree = "<group>"; };
+		CB415CCE2870A0FF00682EEC /* OnBoardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +257,7 @@
 		B8B75C41285CE7F900EA4D4C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CB415CC92870A0FF00682EEC /* OnBoard */,
 				B8E71AAC286EAD3B0075A4ED /* Achievement Detail */,
 				B81F2600286CA4B20026E532 /* Achievement */,
 				B869E0C7286B3B00008033CE /* Challenge History */,
@@ -343,6 +352,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		CB415CC92870A0FF00682EEC /* OnBoard */ = {
+			isa = PBXGroup;
+			children = (
+				CB415CCA2870A0FF00682EEC /* OnBoardVC.swift */,
+				CB415CCB2870A0FF00682EEC /* OnBoardVC.xib */,
+				CB415CCC2870A0FF00682EEC /* OnBoardModel */,
+			);
+			path = OnBoard;
+			sourceTree = "<group>";
+		};
+		CB415CCC2870A0FF00682EEC /* OnBoardModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB415CCD2870A0FF00682EEC /* OnBoardData.swift */,
+				CB415CCE2870A0FF00682EEC /* OnBoardModel.swift */,
+			);
+			path = OnBoardModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -406,13 +434,13 @@
 				B83E89622864066C006EFC54 /* ContinueLearningCell.xib in Resources */,
 				B8E71AAF286EAD3B0075A4ED /* AchievementDetailVC.xib in Resources */,
 				B8B75C39285CE7D300EA4D4C /* LaunchScreen.storyboard in Resources */,
-				BB02A8EA286F4DF9007D83DE /* ContentVC.xib in Resources */,
 				B81F2604286CA4D70026E532 /* AchievementVC.xib in Resources */,
 				B81DCD8D28673B3200EBF414 /* StatisticsAchievementCell.xib in Resources */,
 				B8CDAD432863544A00200B68 /* ProgressVC.xib in Resources */,
 				B81DCD8928673B2000EBF414 /* StatisticsChallengeProgressCell.xib in Resources */,
 				B869E0E6286B42C2008033CE /* MaterialListCell.xib in Resources */,
 				B8B75C36285CE7D300EA4D4C /* Assets.xcassets in Resources */,
+				CB415CD02870A0FF00682EEC /* OnBoardVC.xib in Resources */,
 				B8CDAD4F2863548100200B68 /* MaterialsVC.xib in Resources */,
 				B81DCD8528673B0900EBF414 /* StatisticsLearningProgressCell.xib in Resources */,
 				B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */,
@@ -439,20 +467,21 @@
 				B81DCD8C28673B3200EBF414 /* StatisticsAchievementCell.swift in Sources */,
 				B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */,
 				B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */,
-				BB02A8E9286F4DF9007D83DE /* ContentVC.swift in Sources */,
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
 				B8E71A97286E9DC50075A4ED /* CollectionHeaderView.swift in Sources */,
+				CB415CD22870A0FF00682EEC /* OnBoardModel.swift in Sources */,
 				B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */,
 				B869E0E7286B42C2008033CE /* MaterialModel.swift in Sources */,
 				B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */,
+				CB415CCF2870A0FF00682EEC /* OnBoardVC.swift in Sources */,
 				B869E0D1286B3C04008033CE /* ChallengeHistoryCell.swift in Sources */,
 				B869E0CD286B3B38008033CE /* ChallengeHistoryVC.swift in Sources */,
 				B83E896528641211006EFC54 /* UIView+Extension.swift in Sources */,
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
 				B8CDAD422863544A00200B68 /* ProgressVC.swift in Sources */,
+				CB415CD12870A0FF00682EEC /* OnBoardData.swift in Sources */,
 				B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */,
 				B869E0E5286B42C2008033CE /* MaterialListCell.swift in Sources */,
-				BB02A8EE286F4E48007D83DE /* ContentCollectionViewCell.swift in Sources */,
 				B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */,
 				B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */,
 				B8E71AB5286EAD4F0075A4ED /* AchievementListCell.swift in Sources */,
