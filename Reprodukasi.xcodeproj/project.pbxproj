@@ -44,10 +44,11 @@
 		B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD492863547700200B68 /* StatisticsVC.xib */; };
 		B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDAD4C2863548100200B68 /* MaterialsVC.swift */; };
 		B8CDAD4F2863548100200B68 /* MaterialsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD4D2863548100200B68 /* MaterialsVC.xib */; };
-		BB02A8E9286F4DF9007D83DE /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02A8E7286F4DF9007D83DE /* ContentVC.swift */; };
-		BB02A8EA286F4DF9007D83DE /* ContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB02A8E8286F4DF9007D83DE /* ContentVC.xib */; };
-		BB02A8EE286F4E48007D83DE /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02A8EC286F4E48007D83DE /* ContentCollectionViewCell.swift */; };
-		BB02A8EF286F4E48007D83DE /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB02A8ED286F4E48007D83DE /* ContentCollectionViewCell.xib */; };
+		B8E71A97286E9DC50075A4ED /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */; };
+		B8E71AAF286EAD3B0075A4ED /* AchievementDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E71AAD286EAD3B0075A4ED /* AchievementDetailVC.xib */; };
+		B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */; };
+		B8E71AB4286EAD4F0075A4ED /* AchievementListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E71AB2286EAD4F0075A4ED /* AchievementListCell.xib */; };
+		B8E71AB5286EAD4F0075A4ED /* AchievementListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,10 +91,11 @@
 		B8CDAD492863547700200B68 /* StatisticsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsVC.xib; sourceTree = "<group>"; };
 		B8CDAD4C2863548100200B68 /* MaterialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialsVC.swift; sourceTree = "<group>"; };
 		B8CDAD4D2863548100200B68 /* MaterialsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialsVC.xib; sourceTree = "<group>"; };
-		BB02A8E7286F4DF9007D83DE /* ContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
-		BB02A8E8286F4DF9007D83DE /* ContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentVC.xib; sourceTree = "<group>"; };
-		BB02A8EC286F4E48007D83DE /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
-		BB02A8ED286F4E48007D83DE /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		B8E71AAD286EAD3B0075A4ED /* AchievementDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementDetailVC.xib; sourceTree = "<group>"; };
+		B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementDetailVC.swift; sourceTree = "<group>"; };
+		B8E71AB2286EAD4F0075A4ED /* AchievementListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementListCell.xib; sourceTree = "<group>"; };
+		B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		B81F2600286CA4B20026E532 /* Achievement */ = {
 			isa = PBXGroup;
 			children = (
+				B8E71AB1286EAD4F0075A4ED /* Cells */,
 				B81F2601286CA4D70026E532 /* AchievementVC.swift */,
 				B81F2602286CA4D70026E532 /* AchievementVC.xib */,
 			);
@@ -132,6 +135,7 @@
 		B83E895728640482006EFC54 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */,
 				B83E89582864049C006EFC54 /* RPPrimaryButton.swift */,
 			);
 			path = "Custom Views";
@@ -245,7 +249,7 @@
 		B8B75C41285CE7F900EA4D4C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BB02A8E6286F4DE0007D83DE /* Content */,
+				B8E71AAC286EAD3B0075A4ED /* Achievement Detail */,
 				B81F2600286CA4B20026E532 /* Achievement */,
 				B869E0C7286B3B00008033CE /* Challenge History */,
 				B85273BC2865488B0009EA22 /* Challenge Detail */,
@@ -321,23 +325,22 @@
 			path = Materials;
 			sourceTree = "<group>";
 		};
-		BB02A8E6286F4DE0007D83DE /* Content */ = {
+		B8E71AAC286EAD3B0075A4ED /* Achievement Detail */ = {
 			isa = PBXGroup;
 			children = (
-				BB02A8EB286F4E2E007D83DE /* Cell */,
-				BB02A8E7286F4DF9007D83DE /* ContentVC.swift */,
-				BB02A8E8286F4DF9007D83DE /* ContentVC.xib */,
+				B8E71AAD286EAD3B0075A4ED /* AchievementDetailVC.xib */,
+				B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */,
 			);
-			path = Content;
+			path = "Achievement Detail";
 			sourceTree = "<group>";
 		};
-		BB02A8EB286F4E2E007D83DE /* Cell */ = {
+		B8E71AB1286EAD4F0075A4ED /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BB02A8EC286F4E48007D83DE /* ContentCollectionViewCell.swift */,
-				BB02A8ED286F4E48007D83DE /* ContentCollectionViewCell.xib */,
+				B8E71AB2286EAD4F0075A4ED /* AchievementListCell.xib */,
+				B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,8 +402,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E71AB4286EAD4F0075A4ED /* AchievementListCell.xib in Resources */,
 				B83E89622864066C006EFC54 /* ContinueLearningCell.xib in Resources */,
-				BB02A8EF286F4E48007D83DE /* ContentCollectionViewCell.xib in Resources */,
+				B8E71AAF286EAD3B0075A4ED /* AchievementDetailVC.xib in Resources */,
 				B8B75C39285CE7D300EA4D4C /* LaunchScreen.storyboard in Resources */,
 				BB02A8EA286F4DF9007D83DE /* ContentVC.xib in Resources */,
 				B81F2604286CA4D70026E532 /* AchievementVC.xib in Resources */,
@@ -437,6 +441,7 @@
 				B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */,
 				BB02A8E9286F4DF9007D83DE /* ContentVC.swift in Sources */,
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
+				B8E71A97286E9DC50075A4ED /* CollectionHeaderView.swift in Sources */,
 				B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */,
 				B869E0E7286B42C2008033CE /* MaterialModel.swift in Sources */,
 				B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */,
@@ -445,10 +450,12 @@
 				B83E896528641211006EFC54 /* UIView+Extension.swift in Sources */,
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
 				B8CDAD422863544A00200B68 /* ProgressVC.swift in Sources */,
+				B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */,
 				B869E0E5286B42C2008033CE /* MaterialListCell.swift in Sources */,
 				BB02A8EE286F4E48007D83DE /* ContentCollectionViewCell.swift in Sources */,
 				B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */,
 				B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */,
+				B8E71AB5286EAD4F0075A4ED /* AchievementListCell.swift in Sources */,
 				B83E895D28640652006EFC54 /* TodaysChallengeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
