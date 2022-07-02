@@ -20,9 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RfL-LL-bTv">
-                    <rect key="frame" x="0.0" y="33" width="414" height="829"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RfL-LL-bTv">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mZL-8O-Cxp">
                         <size key="itemSize" width="414" height="829"/>
@@ -44,6 +43,12 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RfL-LL-bTv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WGP-rq-1mD"/>
+                <constraint firstItem="RfL-LL-bTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WPB-cJ-xIZ"/>
+                <constraint firstItem="RfL-LL-bTv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dOW-dy-ngV"/>
+                <constraint firstItem="RfL-LL-bTv" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="ltL-7M-Y3N"/>
+            </constraints>
             <point key="canvasLocation" x="-620.28985507246387" y="-352.23214285714283"/>
         </view>
     </objects>
