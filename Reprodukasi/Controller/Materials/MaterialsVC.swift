@@ -26,10 +26,6 @@ class MaterialsVC: UIViewController, UINavigationBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        //navigationController?.navigationBar.delegate = self
-        navigationController?.navigationItem.title = "Coba"
-        navigationController?.navigationBar.prefersLargeTitles = true
       
         setupTable()
         addData()
@@ -37,9 +33,11 @@ class MaterialsVC: UIViewController, UINavigationBarDelegate {
     
     
     func setupTable(){
-        let nib = UINib(nibName: "MaterialListCell", bundle: nil)
         
-//        materiTableView.register(UINib(nibName: "section1", bundle: nil), forCellReuseIdentifier: "section1")
+        title = "Materi"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let nib = UINib(nibName: "MaterialListCell", bundle: nil)
         materiTableView.register(nib, forCellReuseIdentifier: "custom1")
         materiTableView.delegate = self
         materiTableView.dataSource = self
