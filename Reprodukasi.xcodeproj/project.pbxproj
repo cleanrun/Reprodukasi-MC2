@@ -44,6 +44,10 @@
 		B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD492863547700200B68 /* StatisticsVC.xib */; };
 		B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDAD4C2863548100200B68 /* MaterialsVC.swift */; };
 		B8CDAD4F2863548100200B68 /* MaterialsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD4D2863548100200B68 /* MaterialsVC.xib */; };
+		BB02A8E9286F4DF9007D83DE /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02A8E7286F4DF9007D83DE /* ContentVC.swift */; };
+		BB02A8EA286F4DF9007D83DE /* ContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB02A8E8286F4DF9007D83DE /* ContentVC.xib */; };
+		BB02A8EE286F4E48007D83DE /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02A8EC286F4E48007D83DE /* ContentCollectionViewCell.swift */; };
+		BB02A8EF286F4E48007D83DE /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB02A8ED286F4E48007D83DE /* ContentCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		B8CDAD492863547700200B68 /* StatisticsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsVC.xib; sourceTree = "<group>"; };
 		B8CDAD4C2863548100200B68 /* MaterialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialsVC.swift; sourceTree = "<group>"; };
 		B8CDAD4D2863548100200B68 /* MaterialsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialsVC.xib; sourceTree = "<group>"; };
+		BB02A8E7286F4DF9007D83DE /* ContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
+		BB02A8E8286F4DF9007D83DE /* ContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentVC.xib; sourceTree = "<group>"; };
+		BB02A8EC286F4E48007D83DE /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB02A8ED286F4E48007D83DE /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +245,7 @@
 		B8B75C41285CE7F900EA4D4C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BB02A8E6286F4DE0007D83DE /* Content */,
 				B81F2600286CA4B20026E532 /* Achievement */,
 				B869E0C7286B3B00008033CE /* Challenge History */,
 				B85273BC2865488B0009EA22 /* Challenge Detail */,
@@ -312,6 +321,25 @@
 			path = Materials;
 			sourceTree = "<group>";
 		};
+		BB02A8E6286F4DE0007D83DE /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				BB02A8EB286F4E2E007D83DE /* Cell */,
+				BB02A8E7286F4DF9007D83DE /* ContentVC.swift */,
+				BB02A8E8286F4DF9007D83DE /* ContentVC.xib */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		BB02A8EB286F4E2E007D83DE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BB02A8EC286F4E48007D83DE /* ContentCollectionViewCell.swift */,
+				BB02A8ED286F4E48007D83DE /* ContentCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,7 +400,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B83E89622864066C006EFC54 /* ContinueLearningCell.xib in Resources */,
+				BB02A8EF286F4E48007D83DE /* ContentCollectionViewCell.xib in Resources */,
 				B8B75C39285CE7D300EA4D4C /* LaunchScreen.storyboard in Resources */,
+				BB02A8EA286F4DF9007D83DE /* ContentVC.xib in Resources */,
 				B81F2604286CA4D70026E532 /* AchievementVC.xib in Resources */,
 				B81DCD8D28673B3200EBF414 /* StatisticsAchievementCell.xib in Resources */,
 				B8CDAD432863544A00200B68 /* ProgressVC.xib in Resources */,
@@ -405,6 +435,7 @@
 				B81DCD8C28673B3200EBF414 /* StatisticsAchievementCell.swift in Sources */,
 				B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */,
 				B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */,
+				BB02A8E9286F4DF9007D83DE /* ContentVC.swift in Sources */,
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
 				B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */,
 				B869E0E7286B42C2008033CE /* MaterialModel.swift in Sources */,
@@ -415,6 +446,7 @@
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
 				B8CDAD422863544A00200B68 /* ProgressVC.swift in Sources */,
 				B869E0E5286B42C2008033CE /* MaterialListCell.swift in Sources */,
+				BB02A8EE286F4E48007D83DE /* ContentCollectionViewCell.swift in Sources */,
 				B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */,
 				B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */,
 				B83E895D28640652006EFC54 /* TodaysChallengeCell.swift in Sources */,
