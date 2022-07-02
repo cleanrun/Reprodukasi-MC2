@@ -11,12 +11,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        setRootViewController()
 //        let vc = ContentVC(nibName: "ContentVC", bundle: nil)
 //        let navController = UINavigationController(rootViewController: vc)
 //        window?.rootViewController = navController
@@ -51,6 +51,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    }
+    
+    private func setRootViewController() {
+        // Gue sambil kommen disini aja ya biar kalian bisa diskusi yang lain
+        
+        // 1. Kita cek dulu apa OnBoarding itu harus di show gak, ini pake UserDefaults
+        let isFirstTimeUsingApp = UserDefaults.standard.bool(forKey: "isFirstTimeUsingApp")
+        // 2. Ini placeholder buat Root View Controller yang mana yang mau kita show setelah launch nya beres
+        var rootVC: UIViewController
+        // 3. Kalo misalnya dia baru pertama pake appnya, kita set ke onboarding view controller
+        if !isFirstTimeUsingApp {
+            rootVC = OnBoardVC()
+            UserDefaults.standard.set(true, forKey: "isFirstTimeUsingApp")
+        }
+        // 4. Kalo udah pernah, dia langsung ke tab bar view controllernya
+        else {
+            rootVC = MainTabBarVC()
+        }
+        // 5. Kita set window nya ke root view controller tadi
+        window?.rootViewController = rootVC
+        window?.makeKeyAndVisible()
     }
 
 
