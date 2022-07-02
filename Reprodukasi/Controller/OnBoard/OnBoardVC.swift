@@ -22,6 +22,14 @@ class OnBoardVC: UIViewController {
     var data = OnBoardData.shared.fetchData()
     var currentPage = 0
     
+    init() {
+        super.init(nibName: "OnBoardVC", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI(index: currentPage)
@@ -44,20 +52,29 @@ class OnBoardVC: UIViewController {
             nextButton.setTitle("Mari Kita Mulai", for: .normal)
     }
     
+    func routeToMainTab() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let tabBarVC = MainTabBarVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = tabBarVC
+        }, completion: nil)
+    }
     
     @IBAction func nextAction(_ sender: Any) {
-        if currentPage < data.count {
+        if currentPage < (data.count-1) {
             currentPage += 1
             updateUI(index: currentPage)
             updatePageControl()
+            if currentPage == 3 {
+                updateButton()
+            }
         }
         else {
-            updateButton()
-            
+            routeToMainTab()
         }
     }
     
     @IBAction func skipAction(_ sender: Any) {
-//        next step
+        routeToMainTab()
     }
 }

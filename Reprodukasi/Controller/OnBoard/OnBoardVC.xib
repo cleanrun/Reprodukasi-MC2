@@ -18,6 +18,7 @@
                 <outlet property="onBoardView" destination="dEN-Xp-dkk" id="fUD-v4-9pb"/>
                 <outlet property="progressOnboard" destination="Ezb-1F-RI7" id="zhr-Bb-t4K"/>
                 <outlet property="skipButton" destination="sAc-uk-GCg" id="hDw-7Z-gym"/>
+                <outlet property="view" destination="SQD-oY-zZ7" id="Xp3-TM-bIs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -16,6 +16,8 @@ class MainTabBarVC: UITabBarController {
     }
 
     private func setupTabs() {
+        tabBar.tintColor = UIColor.PRIMARY_RED
+        
         let progressVC = ProgressVC()
         let progressTabBarItem = UITabBarItem(title: "Progress", image: UIImage(systemName: "list.bullet"), selectedImage: UIImage(systemName: "list.bullet"))
         progressVC.tabBarItem = progressTabBarItem
