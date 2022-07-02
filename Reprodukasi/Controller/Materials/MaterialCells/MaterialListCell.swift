@@ -32,7 +32,6 @@ class MaterialListCell: UITableViewCell {
         imageMateriUI.image = UIImage(named: materialModel.image)
         materiNameUI.text = materialModel.title
         materiPreviewUI.text = materialModel.detail
-        progressLabelUI.text = materialModel.percent
         imageMateriUI.layer.cornerRadius = 10
     }
     
@@ -40,6 +39,7 @@ class MaterialListCell: UITableViewCell {
         super.awakeFromNib()
         imageContainView.roundEachCorners(corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner], radius: 10)
         containerUI.applyCardView()
+        imageMateriUI.roundEachCorners(corners: [.layerMinXMaxYCorner, .layerMaxXMinYCorner], radius: 10)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
