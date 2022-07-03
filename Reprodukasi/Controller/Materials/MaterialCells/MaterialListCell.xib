@@ -37,20 +37,20 @@
                                 </subviews>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gBw-gT-roL">
-                                <rect key="frame" x="98" y="12" width="229" height="64.5"/>
+                                <rect key="frame" x="98" y="12" width="229" height="92.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hayo loh yang rokok.." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrl-7c-Ydv">
-                                        <rect key="frame" x="0.0" y="0.0" width="229" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hayo loh yang rokok rokok rokok rokok" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrl-7c-Ydv">
+                                        <rect key="frame" x="0.0" y="0.0" width="229" height="50"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kpj-kc-Igf"/>
                                             <constraint firstAttribute="width" constant="229" id="nh7-Wz-4p6"/>
-                                            <constraint firstAttribute="height" constant="22" id="pHC-Uo-dDB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa sih rokok bisa merusak kesehatan reproduksi?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThT-Pb-b00">
-                                        <rect key="frame" x="0.0" y="31" width="229" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="59" width="229" height="33.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="229" id="zpF-Mr-fX0"/>
                                         </constraints>
@@ -61,7 +61,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VRJ-cD-jnU">
-                                <rect key="frame" x="103" y="176.5" width="178" height="21.5"/>
+                                <rect key="frame" x="103" y="174.5" width="178" height="21.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50% Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHA-FU-hmx">
                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="13.5"/>
@@ -82,7 +82,7 @@
                             <constraint firstAttribute="width" constant="335" id="4vl-2W-PLp"/>
                             <constraint firstAttribute="bottom" secondItem="irn-qh-QwV" secondAttribute="bottom" id="Lo5-bA-QNk"/>
                             <constraint firstItem="VRJ-cD-jnU" firstAttribute="leading" secondItem="irn-qh-QwV" secondAttribute="trailing" constant="8" symbolic="YES" id="NKg-we-98f"/>
-                            <constraint firstItem="VRJ-cD-jnU" firstAttribute="top" secondItem="gBw-gT-roL" secondAttribute="bottom" constant="100" id="PHU-ga-q2w"/>
+                            <constraint firstItem="VRJ-cD-jnU" firstAttribute="top" secondItem="gBw-gT-roL" secondAttribute="bottom" constant="70" id="PHU-ga-q2w"/>
                             <constraint firstItem="gBw-gT-roL" firstAttribute="leading" secondItem="irn-qh-QwV" secondAttribute="trailing" constant="3" id="VK4-Jg-7oF"/>
                             <constraint firstItem="irn-qh-QwV" firstAttribute="top" secondItem="9ic-vw-jKH" secondAttribute="top" id="WTr-wT-IdI"/>
                             <constraint firstAttribute="height" constant="206" id="bea-df-ab3"/>
