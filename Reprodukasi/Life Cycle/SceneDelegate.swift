@@ -54,21 +54,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setRootViewController() {
-        // 1. Kita cek dulu apa OnBoarding itu harus di show gak, ini pake UserDefaults
         let isFirstTimeUsingApp = UserDefaults.standard.bool(forKey: "isFirstTimeUsingApp")
-        // 2. Ini placeholder buat Root View Controller yang mana yang mau kita show setelah launch nya beres
         var rootVC: UIViewController
-        // 3. Kalo misalnya dia baru pertama pake appnya, kita set ke onboarding view controller
+        
         if !isFirstTimeUsingApp {
             CoreDataRepository.current.initiateAllAchievements()
             rootVC = OnBoardVC()
             UserDefaults.standard.set(true, forKey: "isFirstTimeUsingApp")
         }
-        // 4. Kalo udah pernah, dia langsung ke tab bar view controllernya
         else {
             rootVC = MainTabBarVC()
         }
-        // 5. Kita set window nya ke root view controller tadi
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
     }

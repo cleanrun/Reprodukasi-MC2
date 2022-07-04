@@ -20,6 +20,7 @@ class ChallengeDetailVC: UIViewController {
     @IBOutlet weak var learnMoreTableViewHeight: NSLayoutConstraint!
     
     // MARK: - Variables
+    private var challengeModel: ChallengeModel?
 
     // MARK: - Overriden Functions
     init() {
@@ -37,6 +38,7 @@ class ChallengeDetailVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupChallengeDetail()
         setupTableView()
     }
     
@@ -54,13 +56,23 @@ class ChallengeDetailVC: UIViewController {
         learnMoreTableViewHeight.constant = ContinueLearningCell.DEFAULT_HEIGHT * 2
     }
     
+    private func setupChallengeDetail() {
+        challengeModel = CoreDataRepository.current.getTodaysChallenge()
+        if let challengeModel = challengeModel {
+            titleLabel.text = challengeModel.title
+            descriptionLabel.text = challengeModel.desc
+            challengeActionButton.setTitle(challengeModel.isFinished ? "Tantangan Terselesaikan" : "Saya Telah Menyelesaikan Tantangan Ini", for: .normal)
+            challengeActionButton.isUserInteractionEnabled = !challengeModel.isFinished
+        }
+    }
+    
     // MARK: - Custom Functions
     private func showFinishChallengeAlert() {
         let alert = UIAlertController(title: "Selesaikan tantangan", message: "Yakin udah selesai nih?", preferredStyle: .alert)
         let yesAction = UIAlertAction(title: "Ya", style: .default, handler: { [weak self] _ in
             guard let self = self else { return }
-            self.challengeActionButton.setTitle("Tantangan Terselesaikan", for: .normal)
-            self.challengeActionButton.isUserInteractionEnabled = false
+            CoreDataRepository.current.finishTodaysChallenge()
+            self.setupChallengeDetail()
         })
         let noAction = UIAlertAction(title: "Tidak", style: .destructive)
         

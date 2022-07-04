@@ -28,8 +28,19 @@ class TodaysChallengeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setupContents() {
-        // FIXME: Implement this soon
+    func setupContents(_ model: ChallengeModel) {
+        titleLabel.text = model.title
+        descriptionLabel.text = model.desc
+        
+        if model.isFinished {
+            statusImage.image = UIImage(systemName: "checkmark.shield.fill")?.withTintColor(UIColor.SUCCESS_GREEN!, renderingMode: .alwaysOriginal)
+            statusLabel.text = "Telah Selesai"
+            statusLabel.textColor = UIColor.SUCCESS_GREEN
+        } else {
+            statusImage.image = UIImage(systemName: "hourglass.circle.fill")?.withTintColor(UIColor(hex: "#999999"), renderingMode: .alwaysOriginal)
+            statusLabel.text = "Belum Selesai"
+            statusLabel.textColor = UIColor(hex: "#999999")
+        }
     }
     
 }
