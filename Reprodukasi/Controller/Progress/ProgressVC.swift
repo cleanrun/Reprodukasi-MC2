@@ -92,6 +92,31 @@ extension ProgressVC: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             switchToChallengeTab()
         }
+        
+        if indexPath.section == 1
+        {
+            
+            print(indexPath)
+            let button = ContentVC(nibName: "ContentVC", bundle: nil)
+            if indexPath == [1,0] {
+                button.objects = ["siapa-yang-masih-merokok-di-sini-1","siapa-yang-masih-merokok-di-sini-2","siapa-yang-masih-merokok-di-sini-3","siapa-yang-masih-merokok-di-sini-4","siapa-yang-masih-merokok-di-sini-5","siapa-yang-masih-merokok-di-sini-6"]
+            }
+            
+            
+            button.modalPresentationStyle = .overCurrentContext
+            if var topController = UIApplication.shared.keyWindow?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                
+                if topController is MainTabBarVC {
+                    topController.present(button, animated: true)
+                }
+
+                // topController should now be your topmost view controller
+            }
+            
+        }
     }
     
 }
