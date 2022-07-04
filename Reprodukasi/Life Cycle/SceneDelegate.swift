@@ -50,18 +50,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        AppDelegate.shared.coreDataStack.saveContext()
     }
     
     private func setRootViewController() {
-        // Gue sambil kommen disini aja ya biar kalian bisa diskusi yang lain
-        
         // 1. Kita cek dulu apa OnBoarding itu harus di show gak, ini pake UserDefaults
         let isFirstTimeUsingApp = UserDefaults.standard.bool(forKey: "isFirstTimeUsingApp")
         // 2. Ini placeholder buat Root View Controller yang mana yang mau kita show setelah launch nya beres
         var rootVC: UIViewController
         // 3. Kalo misalnya dia baru pertama pake appnya, kita set ke onboarding view controller
         if !isFirstTimeUsingApp {
+            CoreDataRepository.current.initiateAllAchievements()
             rootVC = OnBoardVC()
             UserDefaults.standard.set(true, forKey: "isFirstTimeUsingApp")
         }
@@ -73,7 +72,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
     }
-
-
 }
 

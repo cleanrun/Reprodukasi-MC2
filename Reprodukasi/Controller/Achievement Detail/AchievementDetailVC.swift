@@ -16,15 +16,18 @@ class AchievementDetailVC: UIViewController {
     @IBOutlet weak var timeAchievedLabel: UILabel!
     
     // MARK: - Variables
-    init() {
+    private var achievement: AchievementModel!
+    
+    // MARK: - Overriden Functions
+    init(achievement: AchievementModel) {
         super.init(nibName: nil, bundle: nil)
+        self.achievement = achievement
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
 
-    // MARK: - Overriden Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -33,6 +36,17 @@ class AchievementDetailVC: UIViewController {
     // MARK: - UI Setups
     private func setupUI() {
         navigationItem.largeTitleDisplayMode = .never
+        
+        timeAchievedLabel.isHidden = true
+        
+        titleLabel.text = achievement.title
+        if achievement.dateAchieved != nil {
+            achievementImage.image = UIImage(named: achievement.achievedImage)
+            descriptionLabel.text = "Telah dicapai dengan \(achievement.desc)"
+        } else {
+            achievementImage.image = UIImage(named: achievement.siluetteImage)
+            descriptionLabel.text = "Dicapai dengan \(achievement.desc)"
+        }
     }
     
     // MARK: - Custom Functions
