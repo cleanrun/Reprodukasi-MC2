@@ -13,6 +13,8 @@ class StatisticsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Variables
+    private var allAchievements: [AchievementModel] = []
+    private var achievedAchievements: [AchievementModel] = []
     
     // MARK: - Overriden Functions
     init() {
@@ -32,6 +34,13 @@ class StatisticsVC: UIViewController {
     private func setupTableView() {
         title = "Statistik"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        do {
+            allAchievements = try CoreDataRepository.current.fetchAchievements(type: .all)
+            achievedAchievements = try CoreDataRepository.current.fetchAchievements(type: .achieved)
+        } catch {
+            print(error.localizedDescription)
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -71,6 +80,7 @@ extension StatisticsVC: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsAchievementCell") as! StatisticsAchievementCell
             cell.selectionStyle = .none
+            cell.setContents(allAchievements: allAchievements, achievedAchievements: achievedAchievements)
             return cell
         }
     }

@@ -1,5 +1,5 @@
 //
-//  Challenge.swift
+//  AchievementModel.swift
 //  Reprodukasi
 //
 //  Created by cleanmac-ada on 04/07/22.
@@ -29,7 +29,7 @@ extension AchievementModel {
         return achievement
     }
     
-    static func getAllChallenges() -> [AchievementModel] {
+    static func getAllAchievements() -> [AchievementModel] {
         [
             AchievementModel(achievementId: 1, title: "Akhirnya Aku Belajar", desc: "Menyelesaikan materi pertamamu", achievedImage: AssetName.ACHIEVEMENT_ACHIEVED_1, siluetteImage: AssetName.ACHIEVEMENT_SILUETTE_1),
             AchievementModel(achievementId: 2, title: "Sangat Menantang", desc: "Menyelesaikan tantangan pertamamu", achievedImage: AssetName.ACHIEVEMENT_ACHIEVED_2, siluetteImage: AssetName.ACHIEVEMENT_SILUETTE_2),

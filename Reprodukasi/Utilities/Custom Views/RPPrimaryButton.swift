@@ -16,8 +16,8 @@ class RPPrimaryButton: UIButton {
                 backgroundColor = .PRIMARY_RED
                 setTitleColor(.white, for: .normal)
             } else {
-                backgroundColor = .DISABLED_BUTTON
-                setTitleColor(.DISABLED_TEXT, for: .normal)
+                backgroundColor = .init(hex: "#CEF3D7")
+                setTitleColor(.init(hex: "#34C759"), for: .normal)
             }
         }
     }
@@ -33,8 +33,8 @@ class RPPrimaryButton: UIButton {
             backgroundColor = .PRIMARY_RED
             setTitleColor(.white, for: .normal)
         } else {
-            backgroundColor = .DISABLED_BUTTON
-            setTitleColor(.DISABLED_TEXT, for: .normal)
+            backgroundColor = .init(hex: "#CEF3D7")
+            setTitleColor(.init(hex: "#34C759"), for: .normal)
         }
     }
 }

@@ -13,6 +13,7 @@ class ProgressVC: UIViewController {
     @IBOutlet weak var progressTableView: UITableView!
     
     // MARK: - Variables
+    private var challengeModel: ChallengeModel?
     
     // MARK: - Overriden Functions
     init() {
@@ -28,6 +29,11 @@ class ProgressVC: UIViewController {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setCurrentChallenge()
+    }
+    
     // MARK: - UI Setups
     private func setupUI() {
         title = "Progress"
@@ -38,6 +44,11 @@ class ProgressVC: UIViewController {
         progressTableView.separatorStyle = .none
         progressTableView.register(UINib(nibName: "TodaysChallengeCell", bundle: nil), forCellReuseIdentifier: "TodaysChallengeCell")
         progressTableView.register(UINib(nibName: "ContinueLearningCell", bundle: nil), forCellReuseIdentifier: "ContinueLearningCell")
+    }
+    
+    private func setCurrentChallenge() {
+        challengeModel = CoreDataRepository.current.getTodaysChallenge()
+        progressTableView.reloadData()
     }
     
     // MARK: - Custom Functions
@@ -55,13 +66,16 @@ extension ProgressVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        section == 0 ? (challengeModel != nil ? 1 : 0) : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TodaysChallengeCell") as! TodaysChallengeCell
             cell.selectionStyle = .none
+            if let challengeModel = challengeModel {
+                cell.setupContents(challengeModel)
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ContinueLearningCell") as! ContinueLearningCell
