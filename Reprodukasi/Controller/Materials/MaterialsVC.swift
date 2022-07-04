@@ -88,6 +88,48 @@ extension MaterialsVC: UITableViewDelegate, UITableViewDataSource {
             return 35
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+        let button = ContentVC(nibName: "ContentVC", bundle: nil)
+        if indexPath == [0,0] {
+            button.objects = ["siapa-yang-masih-merokok-di-sini-1","siapa-yang-masih-merokok-di-sini-2","siapa-yang-masih-merokok-di-sini-3","siapa-yang-masih-merokok-di-sini-4","siapa-yang-masih-merokok-di-sini-5","siapa-yang-masih-merokok-di-sini-6"]
+        }
+        else if indexPath == [0,1] {
+            button.objects = ["olahraga-intensitas-tinggi-tidak-baik-1","olahraga-intensitas-tinggi-tidak-baik-2","olahraga-intensitas-tinggi-tidak-baik-3","olahraga-intensitas-tinggi-tidak-baik-4","olahraga-intensitas-tinggi-tidak-baik-5","olahraga-intensitas-tinggi-tidak-baik-6"]
+        }
+        
+    
+        else if indexPath == [1,0] {
+            button.objects = ["sabun-kewanitaan-menyebabkan-iritasi-1","sabun-kewanitaan-menyebabkan-iritasi-2","sabun-kewanitaan-menyebabkan-iritasi-3","sabun-kewanitaan-menyebabkan-iritasi-4","sabun-kewanitaan-menyebabkan-iritasi-5","sabun-kewanitaan-menyebabkan-iritasi-6"]
+        }
+        
+        else if indexPath == [2,0] {
+            button.objects = ["masa-tidak-suka-ikan-1", "masa-tidak-suka-ikan-2",
+                              "masa-tidak-suka-ikan-3", "masa-tidak-suka-ikan-4",
+                              "masa-tidak-suka-ikan-5" ,"masa-tidak-suka-ikan-6"]
+
+        }
+        
+        else if indexPath == [2,1] {
+            button.objects = ["pose-bridge-untuk-kesehatan-reproduksi-1","pose-bridge-untuk-kesehatan-reproduksi-2","pose-bridge-untuk-kesehatan-reproduksi-3","pose-bridge-untuk-kesehatan-reproduksi-4","pose-bridge-untuk-kesehatan-reproduksi-5","pose-bridge-untuk-kesehatan-reproduksi-6"]
+        }
+        
+        
+        button.modalPresentationStyle = .overCurrentContext
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            if topController is MainTabBarVC {
+                topController.present(button, animated: true)
+            }
+
+            // topController should now be your topmost view controller
+        }
+        
+    }
+    
 
 
 }

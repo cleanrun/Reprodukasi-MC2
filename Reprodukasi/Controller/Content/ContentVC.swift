@@ -9,7 +9,7 @@ import UIKit
 
 
 class ContentVC: UIViewController ,UICollectionViewDelegate, UICollectionViewDataSource {
-    let objects = ["masa-tidak-suka-ikan-1", "masa-tidak-suka-ikan-2", "masa-tidak-suka-ikan-3", "masa-tidak-suka-ikan-4", "masa-tidak-suka-ikan-5"
+    var objects = ["masa-tidak-suka-ikan-1", "masa-tidak-suka-ikan-2", "masa-tidak-suka-ikan-3", "masa-tidak-suka-ikan-4", "masa-tidak-suka-ikan-5"
     ,"masa-tidak-suka-ikan-1"]
 
     @IBOutlet var myPageControl: UIPageControl!
@@ -24,6 +24,8 @@ class ContentVC: UIViewController ,UICollectionViewDelegate, UICollectionViewDat
        //or if you use class:
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        
+        print(objects)
         
         //let myPageControl = CHIPageControlJaloro(frame: CGRect(x: 0, y:0, width: 100, height: 20))
         //myPageControl.transform = CGAffineTransform(scaleX: 5, y: 1);
@@ -88,6 +90,9 @@ class ContentVC: UIViewController ,UICollectionViewDelegate, UICollectionViewDat
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func exitExercise(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 
 }
 
