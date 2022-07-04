@@ -77,7 +77,7 @@ extension MaterialsVC: UITableViewDelegate, UITableViewDataSource {
             label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
             label.text = data.section[section].title
             label.textColor = .black
-            label.font = .systemFont(ofSize: 16, weight: .semibold)
+            label.font = .systemFont(ofSize: 20, weight: .semibold)
 
             headerView.addSubview(label)
 
@@ -85,7 +85,7 @@ extension MaterialsVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 50
+            return 35
     }
     
 

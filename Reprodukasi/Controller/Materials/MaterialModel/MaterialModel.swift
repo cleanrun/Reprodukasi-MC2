@@ -21,7 +21,6 @@ struct MaterialModel {
     var title:String!
     var detail:String!
     var image:String!
-    var percent:String!
 //    private let progressView: UIProgressView
     
 }
