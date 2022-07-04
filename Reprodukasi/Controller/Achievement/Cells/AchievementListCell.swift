@@ -14,7 +14,11 @@ class AchievementListCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func setContents(_ model: AchievementModel) {
+        achievementImage.image = model.dateAchieved != nil ? UIImage(named: model.achievedImage) : UIImage(named: model.siluetteImage)
+        achievementLabel.text = model.title
     }
 
 }

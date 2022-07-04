@@ -20,17 +20,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xMX-Wy-JFh">
-                                <rect key="frame" x="0.0" y="12" width="100" height="76.5"/>
+                                <rect key="frame" x="6" y="12" width="88" height="76.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_achievement_disabled" translatesAutoresizingMaskIntoConstraints="NO" id="TGF-hh-9Xz">
-                                        <rect key="frame" x="20" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="14" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="26D-Di-f4j"/>
                                             <constraint firstAttribute="height" constant="60" id="SNh-gH-N4T"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR5-lV-Xrm">
-                                        <rect key="frame" x="16" y="63" width="68" height="13.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR5-lV-Xrm">
+                                        <rect key="frame" x="10" y="63" width="68" height="13.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -40,9 +40,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xMX-Wy-JFh" firstAttribute="leading" secondItem="ZxA-y3-bs0" secondAttribute="leading" id="4Wh-ZX-mo7"/>
+                            <constraint firstItem="xMX-Wy-JFh" firstAttribute="leading" secondItem="ZxA-y3-bs0" secondAttribute="leading" constant="6" id="4Wh-ZX-mo7"/>
                             <constraint firstItem="xMX-Wy-JFh" firstAttribute="centerY" secondItem="ZxA-y3-bs0" secondAttribute="centerY" id="UKE-uF-vcF"/>
-                            <constraint firstAttribute="trailing" secondItem="xMX-Wy-JFh" secondAttribute="trailing" id="Zij-Wk-Hnc"/>
+                            <constraint firstAttribute="trailing" secondItem="xMX-Wy-JFh" secondAttribute="trailing" constant="6" id="Zij-Wk-Hnc"/>
                         </constraints>
                     </view>
                 </subviews>

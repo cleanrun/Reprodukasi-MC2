@@ -15,6 +15,9 @@ class AchievementVC: UIViewController {
     @IBOutlet weak var achievementCollectionView: UICollectionView!
     
     // MARK: - Variables
+    private var allAchievements: [AchievementModel] = []
+    private var achievedAchievements: [AchievementModel] = []
+    private var notAchievedAchievements: [AchievementModel] = []
     
     // MARK: - Overriden Functions
     init() {
@@ -34,6 +37,17 @@ class AchievementVC: UIViewController {
     private func setupUI() {
         title = "Pencapaian"
         
+        do {
+            allAchievements = try CoreDataRepository.current.fetchAchievements(type: .all)
+            achievedAchievements = try CoreDataRepository.current.fetchAchievements(type: .achieved)
+            notAchievedAchievements = try CoreDataRepository.current.fetchAchievements(type: .notAchieved)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        achievementProgressLabel.text = "\(achievedAchievements.count) dari \(allAchievements.count) tercapai"
+        achievementProgressView.progress = Float(achievedAchievements.count / allAchievements.count)
+        
         achievementCollectionView.delegate = self
         achievementCollectionView.dataSource = self
         achievementCollectionView.register(UINib(nibName: "AchievementListCell", bundle: nil), forCellWithReuseIdentifier: "AchievementListCell")
@@ -41,8 +55,8 @@ class AchievementVC: UIViewController {
     }
     
     // MARK: - Custom Functions
-    private func routeToAchievementDetail() {
-        let vc = AchievementDetailVC()
+    private func routeToAchievementDetail(achievement: AchievementModel) {
+        let vc = AchievementDetailVC(achievement: achievement)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -57,11 +71,12 @@ extension AchievementVC: UICollectionViewDelegate, UICollectionViewDelegateFlowL
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        section == 0 ? achievedAchievements.count : notAchievedAchievements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchievementListCell", for: indexPath) as! AchievementListCell
+        indexPath.section == 0 ? cell.setContents(achievedAchievements[indexPath.row]) : cell.setContents(notAchievedAchievements[indexPath.row])
         return cell
     }
     
@@ -97,6 +112,7 @@ extension AchievementVC: UICollectionViewDelegate, UICollectionViewDelegateFlowL
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        routeToAchievementDetail()
+        let achievement = indexPath.section == 0 ? achievedAchievements[indexPath.row] : notAchievedAchievements[indexPath.row]
+        routeToAchievementDetail(achievement: achievement)
     }
 }

@@ -58,6 +58,12 @@
 		B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */; };
 		B8E71AB4286EAD4F0075A4ED /* AchievementListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E71AB2286EAD4F0075A4ED /* AchievementListCell.xib */; };
 		B8E71AB5286EAD4F0075A4ED /* AchievementListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */; };
+		B8FA609428728A7C00F02AB7 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA609328728A7C00F02AB7 /* AchievementModel.swift */; };
+		B8FA609628728E9300F02AB7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA609528728E9300F02AB7 /* CoreDataStack.swift */; };
+		B8FA609E2872995C00F02AB7 /* Achievement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA609C2872995C00F02AB7 /* Achievement+CoreDataClass.swift */; };
+		B8FA609F2872995C00F02AB7 /* Achievement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA609D2872995C00F02AB7 /* Achievement+CoreDataProperties.swift */; };
+		B8FA60A12872E25600F02AB7 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA60A02872E25600F02AB7 /* CoreDataRepository.swift */; };
+		B8FA60A32872E4C500F02AB7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA60A22872E4C500F02AB7 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +120,12 @@
 		B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementDetailVC.swift; sourceTree = "<group>"; };
 		B8E71AB2286EAD4F0075A4ED /* AchievementListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementListCell.xib; sourceTree = "<group>"; };
 		B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementListCell.swift; sourceTree = "<group>"; };
+		B8FA609328728A7C00F02AB7 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
+		B8FA609528728E9300F02AB7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B8FA609C2872995C00F02AB7 /* Achievement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B8FA609D2872995C00F02AB7 /* Achievement+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B8FA60A02872E25600F02AB7 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		B8FA60A22872E4C500F02AB7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,7 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				B8B75C40285CE7EF00EA4D4C /* Utilities */,
-				B8B75C43285CE80D00EA4D4C /* Model */,
+				B8FA609228728A6F00F02AB7 /* Model */,
 				B8B75C42285CE80200EA4D4C /* Life Cycle */,
 				B8B75C41285CE7F900EA4D4C /* Controller */,
 				B8B75C44285CE82B00EA4D4C /* Storyboard */,
@@ -296,9 +308,11 @@
 		B8B75C40285CE7EF00EA4D4C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B8FA60A22872E4C500F02AB7 /* Enums.swift */,
 				B8B2841728709F5C00895051 /* AssetName.swift */,
 				B83E896328641203006EFC54 /* Extensions */,
 				B83E895728640482006EFC54 /* Custom Views */,
+				B8FA60972872948000F02AB7 /* Core Data */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -327,13 +341,6 @@
 				B8B75C2B285CE7D200EA4D4C /* SceneDelegate.swift */,
 			);
 			path = "Life Cycle";
-			sourceTree = "<group>";
-		};
-		B8B75C43285CE80D00EA4D4C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B8B75C44285CE82B00EA4D4C /* Storyboard */ = {
@@ -400,6 +407,25 @@
 				B8E71AB3286EAD4F0075A4ED /* AchievementListCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B8FA609228728A6F00F02AB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8FA609328728A7C00F02AB7 /* AchievementModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B8FA60972872948000F02AB7 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				B8FA609C2872995C00F02AB7 /* Achievement+CoreDataClass.swift */,
+				B8FA609D2872995C00F02AB7 /* Achievement+CoreDataProperties.swift */,
+				B8FA609528728E9300F02AB7 /* CoreDataStack.swift */,
+				B8FA60A02872E25600F02AB7 /* CoreDataRepository.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,15 +523,19 @@
 				B85273BF286549240009EA22 /* ChallengeDetailVC.swift in Sources */,
 				B81DCD8828673B2000EBF414 /* StatisticsChallengeProgressCell.swift in Sources */,
 				B8B75C2A285CE7D200EA4D4C /* AppDelegate.swift in Sources */,
+				B8FA609628728E9300F02AB7 /* CoreDataStack.swift in Sources */,
 				B81DCD8C28673B3200EBF414 /* StatisticsAchievementCell.swift in Sources */,
 				B8B75C2C285CE7D200EA4D4C /* SceneDelegate.swift in Sources */,
 				B8B2841628709F4200895051 /* ContentCollectionViewCell.swift in Sources */,
+				B8FA60A12872E25600F02AB7 /* CoreDataRepository.swift in Sources */,
 				B83E89612864066C006EFC54 /* ContinueLearningCell.swift in Sources */,
 				B8CDAD4A2863547700200B68 /* StatisticsVC.swift in Sources */,
 				B8B2842D2870A33C00895051 /* OnBoardData.swift in Sources */,
 				B8B2841828709F5C00895051 /* AssetName.swift in Sources */,
+				B8FA609428728A7C00F02AB7 /* AchievementModel.swift in Sources */,
 				B8B2842E2870A33C00895051 /* OnBoardModel.swift in Sources */,
 				B8E71A97286E9DC50075A4ED /* CollectionHeaderView.swift in Sources */,
+				B8FA609E2872995C00F02AB7 /* Achievement+CoreDataClass.swift in Sources */,
 				B81DCD8428673B0900EBF414 /* StatisticsLearningProgressCell.swift in Sources */,
 				B869E0E7286B42C2008033CE /* MaterialModel.swift in Sources */,
 				B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */,
@@ -515,9 +545,11 @@
 				B83E896528641211006EFC54 /* UIView+Extension.swift in Sources */,
 				B8CDAD3A2863538700200B68 /* MainTabBarVC.swift in Sources */,
 				B8CDAD422863544A00200B68 /* ProgressVC.swift in Sources */,
+				B8FA609F2872995C00F02AB7 /* Achievement+CoreDataProperties.swift in Sources */,
 				B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */,
 				B869E0E5286B42C2008033CE /* MaterialListCell.swift in Sources */,
 				B83E89592864049C006EFC54 /* RPPrimaryButton.swift in Sources */,
+				B8FA60A32872E4C500F02AB7 /* Enums.swift in Sources */,
 				B8B2841328709F4200895051 /* ContentVC.swift in Sources */,
 				B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */,
 				B8E71AB5286EAD4F0075A4ED /* AchievementListCell.swift in Sources */,
