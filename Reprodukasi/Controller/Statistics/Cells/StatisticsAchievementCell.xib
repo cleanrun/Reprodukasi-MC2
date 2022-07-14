@@ -65,8 +65,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zP-8M-pZP">
                                         <rect key="frame" x="0.0" y="0.0" width="83.5" height="67"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlebadge.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l8b-hJ-mzb">
-                                                <rect key="frame" x="17" y="11" width="50" height="45"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_achievement_disabled" translatesAutoresizingMaskIntoConstraints="NO" id="l8b-hJ-mzb">
+                                                <rect key="frame" x="17" y="8.5" width="50" height="50"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="HG1-0f-OYg"/>
@@ -83,8 +83,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeH-Pj-5jI">
                                         <rect key="frame" x="83.5" y="0.0" width="83.5" height="67"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlebadge.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nbu-IJ-2I0">
-                                                <rect key="frame" x="17" y="11" width="50" height="45"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_achievement_disabled" translatesAutoresizingMaskIntoConstraints="NO" id="Nbu-IJ-2I0">
+                                                <rect key="frame" x="17" y="8.5" width="50" height="50"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="3ig-u6-B4S"/>
@@ -101,8 +101,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KzH-KA-uAq">
                                         <rect key="frame" x="167" y="0.0" width="83.5" height="67"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlebadge.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iju-6g-ccI">
-                                                <rect key="frame" x="17" y="11" width="50" height="45"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_achievement_disabled" translatesAutoresizingMaskIntoConstraints="NO" id="iju-6g-ccI">
+                                                <rect key="frame" x="17" y="8.5" width="50" height="50"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="4wW-mW-rZf"/>
@@ -119,8 +119,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKp-bz-5eX">
                                         <rect key="frame" x="250.5" y="0.0" width="83.5" height="67"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlebadge.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sUC-Z3-Fhv">
-                                                <rect key="frame" x="17" y="11" width="50" height="45"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_achievement_disabled" translatesAutoresizingMaskIntoConstraints="NO" id="sUC-Z3-Fhv">
+                                                <rect key="frame" x="17" y="8.5" width="50" height="50"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="6da-ad-0Cs"/>
@@ -162,12 +162,14 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="LxF-a2-nZU" id="rC6-3C-9G2"/>
+                <outlet property="progressLabel" destination="9Re-dW-z58" id="HBh-bK-eq1"/>
+                <outlet property="progressView" destination="TqB-dZ-9bR" id="HhL-0R-aBT"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="113.50446428571428"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="circlebadge.fill" catalog="system" width="128" height="120"/>
+        <image name="ic_achievement_disabled" width="81" height="81"/>
         <namedColor name="PrimaryRed">
             <color red="0.85900002717971802" green="0.22699999809265137" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

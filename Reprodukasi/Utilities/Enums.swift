@@ -12,3 +12,10 @@ enum AchievemetType {
     case notAchieved
     case all
 }
+
+@objc
+public enum ChallengeCategory: Int16 {
+    case food
+    case sport
+    case lifestyle
+}

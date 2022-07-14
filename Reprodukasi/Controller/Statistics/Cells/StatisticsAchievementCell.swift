@@ -10,6 +10,8 @@ import UIKit
 class StatisticsAchievementCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     
     static let DEFAULT_HEIGHT: CGFloat = 217
 
@@ -22,8 +24,9 @@ class StatisticsAchievementCell: UITableViewCell {
         containerView.applyCardView()
     }
     
-    func setupContents() {
-        // FIXME: Implement this soon
+    func setContents(allAchievements: [AchievementModel], achievedAchievements: [AchievementModel]) {
+        progressLabel.text = "\(achievedAchievements.count) dari \(allAchievements.count) tercapai"
+        progressView.progress = Float(achievedAchievements.count / allAchievements.count)
     }
     
 }

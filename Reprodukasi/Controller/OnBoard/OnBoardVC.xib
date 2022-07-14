@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                 <outlet property="nextButton" destination="dfa-Qc-m9M" id="LiG-j7-eig"/>
                 <outlet property="onBoardView" destination="dEN-Xp-dkk" id="fUD-v4-9pb"/>
                 <outlet property="progressOnboard" destination="Ezb-1F-RI7" id="zhr-Bb-t4K"/>
-                <outlet property="skipButton" destination="sAc-uk-GCg" id="hDw-7Z-gym"/>
+                <outlet property="skipButton" destination="zSg-i4-073" id="5F9-8S-uHA"/>
                 <outlet property="view" destination="SQD-oY-zZ7" id="Xp3-TM-bIs"/>
             </connections>
         </placeholder>
@@ -93,27 +94,26 @@
                                 <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="Rcq-sF-kbO"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-uk-GCg">
-                            <rect key="frame" x="335" y="34" width="67" height="16"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-i4-073">
+                            <rect key="frame" x="335" y="34" width="67" height="31"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Lewati">
                                 <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="baseForegroundColor" name="PrimaryRed"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="skipAction:" destination="-1" eventType="touchUpInside" id="XvK-gH-NA2"/>
+                                <action selector="skipAction:" destination="-1" eventType="touchUpInside" id="Cqb-df-o8o"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="Ezb-1F-RI7" firstAttribute="top" secondItem="dfa-Qc-m9M" secondAttribute="bottom" constant="50" id="0fT-Ch-7qK"/>
-                        <constraint firstItem="sAc-uk-GCg" firstAttribute="top" secondItem="dEN-Xp-dkk" secondAttribute="top" constant="34" id="1O5-x4-Jtf"/>
                         <constraint firstAttribute="bottom" secondItem="dfa-Qc-m9M" secondAttribute="bottom" constant="136" id="4JT-At-Taq"/>
-                        <constraint firstItem="HUH-lV-iY5" firstAttribute="top" secondItem="sAc-uk-GCg" secondAttribute="bottom" constant="50" id="8QF-ux-wkK"/>
+                        <constraint firstAttribute="trailing" secondItem="zSg-i4-073" secondAttribute="trailing" constant="12" id="CYa-kB-fp7"/>
                         <constraint firstItem="HUH-lV-iY5" firstAttribute="leading" secondItem="dEN-Xp-dkk" secondAttribute="leading" constant="22" id="KSX-Au-cca"/>
                         <constraint firstItem="dfa-Qc-m9M" firstAttribute="top" secondItem="HUH-lV-iY5" secondAttribute="bottom" constant="100" id="Ny6-eI-yFO"/>
-                        <constraint firstAttribute="trailing" secondItem="sAc-uk-GCg" secondAttribute="trailing" constant="12" id="Ong-ob-hRU"/>
+                        <constraint firstItem="zSg-i4-073" firstAttribute="top" secondItem="dEN-Xp-dkk" secondAttribute="top" constant="34" id="YU9-VY-jkU"/>
                         <constraint firstItem="dfa-Qc-m9M" firstAttribute="leading" secondItem="HUH-lV-iY5" secondAttribute="leading" id="Z7B-1z-zpQ"/>
                         <constraint firstItem="dfa-Qc-m9M" firstAttribute="trailing" secondItem="HUH-lV-iY5" secondAttribute="trailing" id="eXr-rk-Gll"/>
                         <constraint firstAttribute="trailing" secondItem="HUH-lV-iY5" secondAttribute="trailing" constant="22" id="r48-YO-Zoo"/>
@@ -129,7 +129,7 @@
                 <constraint firstAttribute="bottom" secondItem="dEN-Xp-dkk" secondAttribute="bottom" id="RXb-pM-DnW"/>
                 <constraint firstItem="dEN-Xp-dkk" firstAttribute="leading" secondItem="SQD-oY-zZ7" secondAttribute="leading" id="bIQ-X5-Xy1"/>
             </constraints>
-            <point key="canvasLocation" x="303" y="-104"/>
+            <point key="canvasLocation" x="302.89855072463769" y="-104.46428571428571"/>
         </view>
     </objects>
     <resources>

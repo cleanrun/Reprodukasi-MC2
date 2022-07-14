@@ -34,7 +34,7 @@ class OnBoardVC: UIViewController {
         super.viewDidLoad()
         updateUI(index: currentPage)
         updatePageControl()
-
+        skipButton.isUserInteractionEnabled = true
     }
     
     func updateUI(index: Int){
@@ -49,7 +49,7 @@ class OnBoardVC: UIViewController {
     }
     
     func updateButton(){
-            nextButton.setTitle("Mari Kita Mulai", for: .normal)
+        nextButton.setTitle("Mari Kita Mulai", for: .normal)
     }
     
     func routeToMainTab() {
