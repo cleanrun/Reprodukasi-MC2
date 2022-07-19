@@ -12,7 +12,7 @@ struct ReprodukasiApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                MainTabView()
+                ChallengeView()
             }
         }
 
