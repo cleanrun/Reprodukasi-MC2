@@ -21,6 +21,8 @@ class MaterialListCell: UITableViewCell {
     @IBOutlet weak var progressLabelUI: UILabel!
     @IBOutlet weak var progressViewUI: UIProgressView!
     
+    var progressValue = 0.0
+    
     
     var materialModel:MaterialModel!{
         didSet{
@@ -32,6 +34,7 @@ class MaterialListCell: UITableViewCell {
         imageMateriUI.image = UIImage(named: materialModel.image)
         materiNameUI.text = materialModel.title
         materiPreviewUI.text = materialModel.detail
+//        progressViewUI.progress = Float(progressValue + currentCellIndex
         imageMateriUI.layer.cornerRadius = 10
         imageMateriUI.roundEachCorners(corners: [.layerMinXMaxYCorner, .layerMaxXMinYCorner], radius: 10)
     }
@@ -48,5 +51,12 @@ class MaterialListCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+//    @objc func setupProgress(){
+//        let progress = ContentVC(nibName: "ContentVC", bundle: nil)
+//        progressValue = progressValue + (Double(progress.currentCellIndex/10))
+//        self.progressViewUI.progress = Float(progressValue)
+//    }
+    
     
 }

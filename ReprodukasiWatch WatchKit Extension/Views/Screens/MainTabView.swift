@@ -9,13 +9,16 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        
+        ChallengeView()
+        
     }
 }
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView()
+        NavigationView{
+            MainTabView()
+        }
     }
 }
