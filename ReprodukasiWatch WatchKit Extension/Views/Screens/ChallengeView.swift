@@ -13,19 +13,21 @@ struct ChallengeView: View {
     @State var challengeState: Bool = false
     var body: some View {
         NavigationView{
+            
             TabView {
                 ChallengeDescButton(challengeState: $challengeState)
-                
+                    
                 StatistikView(totalChallenge: $totalChallenge)
             }
-            .navigationBarTitle("Tantangan")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
 struct ChallengeDescButton: View {
     @Binding var challengeState: Bool
+    
+    @State var showAlert: Bool = false
+    
     var body: some View {
         
             List {
@@ -42,47 +44,47 @@ struct ChallengeDescButton: View {
                                     Text("Deskripsi dari tantangan hari ini")
                                         .font(.system(size: 14, weight: .regular))
                                 }
-                                
                             }.frame(width: 180, height: 75)
+                                .navigationBarTitle("Tantangan")
+                                .navigationBarTitleDisplayMode(.inline)
                         }
                     }.frame(width: 180, height: 75)
-                    
-                    
                 }
                 
                 if(!challengeState) {
                     Button("Selesai") {
+                        // BUKA SHEET/ALERT
+                        showAlert.toggle()
                     }
                         .listItemTint(Color.accentColor)
+                        .font(.system(size: 17, weight: .semibold))
                         .frame(width: 180, height: 44)
                         .multilineTextAlignment(.center)
                         
                 } else {
-                    Button("Telah selesai") {print("halo2")}
-                        .listItemTint(Color.accentColor)
+                    Button("Telah selesai") {}
+                        .foregroundColor(Color.green)
+                        .font(.system(size: 17, weight: .semibold))
+                        .listItemTint(Color.init(red: 216/255, green: 245/255, blue: 223/255))
                         .frame(width: 180, height: 44)
                         .multilineTextAlignment(.center)
                 }
             }
+            .alert("Sudahkah anda melaksanakan tantangan hari ini?", isPresented: $showAlert) {
+                
+                Button("Ya"){
+                    // FUNCTION SAVE & Nampilin Badge
+                }
+                
+                Button("Tidak"){
+                    // FUNCTION BACK (UNTUK TUTUP SHEET)
+                    showAlert.toggle()
+                }
+
+            }
     }
 }
 
-//struct SelesaiButton: View {
-//    var body: some View {
-//        ZStack{
-//            NavigationLink(destination: PengingatView()){
-//                ZStack{
-//                    RoundedRectangle(cornerRadius: 10)
-//                        .frame(width: 182, height: 44)
-//                        .foregroundColor(.accentColor)
-//                    Text("Selesai")
-//                }
-//            } .frame(width: 182, height: 44)
-//
-//
-//        }
-//    }
-//}
 
 struct PengingatView: View {
     @State private var isReminder : Bool = false
@@ -113,25 +115,6 @@ struct PengingatView: View {
     }
 }
 
-struct FinishedChallenge: View {
-    
-    var body: some View {
-        VStack(spacing: 5) {
-            Text("Sudahkah anda melaksanakan tantangan hari ini?")
-            
-            Button("Ya"){}
-                .listItemTint(Color.accentColor)
-                .frame(maxWidth: .infinity)
-                .multilineTextAlignment(.center)
-            
-            Button("Tidak"){}
-                .listItemTint(Color.accentColor)
-                .frame(maxWidth: .infinity)
-                .multilineTextAlignment(.center)
-            
-        }
-    }
-}
 
 struct StatistikView: View {
     @Binding var totalChallenge: Int

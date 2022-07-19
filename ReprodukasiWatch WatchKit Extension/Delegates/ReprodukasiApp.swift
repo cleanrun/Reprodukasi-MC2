@@ -11,9 +11,9 @@ import SwiftUI
 struct ReprodukasiApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ChallengeView()
-            }
+            
+            MainTabView()
+            
         }
 
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
