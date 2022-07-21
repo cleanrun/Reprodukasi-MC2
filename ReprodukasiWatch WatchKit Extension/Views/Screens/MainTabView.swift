@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        NavigationView {
-            TabView {
+        TabView {
+            NavigationView {
                 ChallengeView()
-                StatisticsView()
             }
+            StatisticsView()
         }
         
     }

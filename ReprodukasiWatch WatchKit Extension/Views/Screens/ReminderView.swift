@@ -9,14 +9,19 @@ import SwiftUI
 
 struct ReminderView: View {
     @State private var isReminder : Bool = false
+    private var challengeDict: [String: Any]?
+    
+    init(challengeDict: [String: Any]?) {
+        self.challengeDict = challengeDict
+    }
     
     var body: some View {
         
         VStack(spacing: 10) {
             VStack(alignment: .leading, spacing: 5){
-                Text("Judul Tantangan")
+                Text((challengeDict?["title"] as? String) ?? "Judul Tantangan")
                     .font(.system(size: 17, weight: .bold))
-                Text("Deskripsi tantangan seperti apa. Jadi bisa panjang.")
+                Text((challengeDict?["desc"] as? String) ?? "Deskripsi tantangan seperti apa. Jadi bisa panjang.")
                     .font(.system(size: 17, weight: .regular))
             }
             ZStack{
@@ -33,6 +38,6 @@ struct ReminderView: View {
                     
                 }
             }
-        }
+        }.navigationTitle("Tantangan")
     }
 }
