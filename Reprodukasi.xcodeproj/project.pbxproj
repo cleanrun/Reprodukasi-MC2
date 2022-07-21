@@ -38,6 +38,7 @@
 		B85273BF286549240009EA22 /* ChallengeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85273BD286549240009EA22 /* ChallengeDetailVC.swift */; };
 		B85273C0286549240009EA22 /* ChallengeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85273BE286549240009EA22 /* ChallengeDetailVC.xib */; };
 		B85273C228654C4D0009EA22 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85273C128654C4D0009EA22 /* UIColor+Extension.swift */; };
+		B8532B642887BC2F00B366CC /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8532B632887BC2F00B366CC /* ReminderView.swift */; };
 		B869E0CD286B3B38008033CE /* ChallengeHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0CC286B3B38008033CE /* ChallengeHistoryVC.swift */; };
 		B869E0D1286B3C04008033CE /* ChallengeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E0CF286B3C04008033CE /* ChallengeHistoryCell.swift */; };
 		B869E0D2286B3C04008033CE /* ChallengeHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B869E0D0286B3C04008033CE /* ChallengeHistoryCell.xib */; };
@@ -71,6 +72,16 @@
 		B8CDAD4B2863547700200B68 /* StatisticsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD492863547700200B68 /* StatisticsVC.xib */; };
 		B8CDAD4E2863548100200B68 /* MaterialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDAD4C2863548100200B68 /* MaterialsVC.swift */; };
 		B8CDAD4F2863548100200B68 /* MaterialsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CDAD4D2863548100200B68 /* MaterialsVC.xib */; };
+		B8DBC65F2886ADA50026683F /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1D30C2873157500C1B60A /* ChallengeModel.swift */; };
+		B8DBC6622886AF970026683F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA60A22872E4C500F02AB7 /* Enums.swift */; };
+		B8DBC6642886B0040026683F /* Challenge+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1D30F2873176900C1B60A /* Challenge+CoreDataClass.swift */; };
+		B8DBC6652886B0060026683F /* Challenge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1D3102873176900C1B60A /* Challenge+CoreDataProperties.swift */; };
+		B8DBC6662886B0080026683F /* Achievement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA609C2872995C00F02AB7 /* Achievement+CoreDataClass.swift */; };
+		B8DBC6672886B00A0026683F /* Achievement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA609D2872995C00F02AB7 /* Achievement+CoreDataProperties.swift */; };
+		B8DBC6682886B0120026683F /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA609328728A7C00F02AB7 /* AchievementModel.swift */; };
+		B8DBC6692886B0180026683F /* AssetName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B2841728709F5C00895051 /* AssetName.swift */; };
+		B8DBC66A2886B0270026683F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1D3132873239600C1B60A /* Date+Extension.swift */; };
+		B8DBC6722886C0510026683F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DBC6712886C0510026683F /* CloudKit.framework */; };
 		B8E71A97286E9DC50075A4ED /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */; };
 		B8E71AAF286EAD3B0075A4ED /* AchievementDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E71AAD286EAD3B0075A4ED /* AchievementDetailVC.xib */; };
 		B8E71AB0286EAD3B0075A4ED /* AchievementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */; };
@@ -160,6 +171,7 @@
 		B85273BD286549240009EA22 /* ChallengeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailVC.swift; sourceTree = "<group>"; };
 		B85273BE286549240009EA22 /* ChallengeDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallengeDetailVC.xib; sourceTree = "<group>"; };
 		B85273C128654C4D0009EA22 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B8532B632887BC2F00B366CC /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		B869E0CC286B3B38008033CE /* ChallengeHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeHistoryVC.swift; sourceTree = "<group>"; };
 		B869E0CF286B3C04008033CE /* ChallengeHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeHistoryCell.swift; sourceTree = "<group>"; };
 		B869E0D0286B3C04008033CE /* ChallengeHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallengeHistoryCell.xib; sourceTree = "<group>"; };
@@ -195,6 +207,8 @@
 		B8CDAD492863547700200B68 /* StatisticsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsVC.xib; sourceTree = "<group>"; };
 		B8CDAD4C2863548100200B68 /* MaterialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialsVC.swift; sourceTree = "<group>"; };
 		B8CDAD4D2863548100200B68 /* MaterialsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialsVC.xib; sourceTree = "<group>"; };
+		B8DBC66F2886C01C0026683F /* Reprodukasi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reprodukasi.entitlements; sourceTree = "<group>"; };
+		B8DBC6712886C0510026683F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B8E71A96286E9DC50075A4ED /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		B8E71AAD286EAD3B0075A4ED /* AchievementDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementDetailVC.xib; sourceTree = "<group>"; };
 		B8E71AAE286EAD3B0075A4ED /* AchievementDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementDetailVC.swift; sourceTree = "<group>"; };
@@ -220,6 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8DBC6722886C0510026683F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +328,7 @@
 				B835E0DC287FD9AC00812AF6 /* StatisticsView.swift */,
 				B835E0DE287FD9BB00812AF6 /* FinishedChallengeView.swift */,
 				B835E0E1287FD9CC00812AF6 /* BadgeView.swift */,
+				B8532B632887BC2F00B366CC /* ReminderView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -448,6 +464,7 @@
 				B835E0AE287FD75600812AF6 /* ReprodukasiWatch */,
 				B835E0B9287FD75700812AF6 /* ReprodukasiWatch WatchKit Extension */,
 				B8B75C27285CE7D200EA4D4C /* Products */,
+				B8DBC6702886C0510026683F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -464,6 +481,7 @@
 		B8B75C28285CE7D200EA4D4C /* Reprodukasi */ = {
 			isa = PBXGroup;
 			children = (
+				B8DBC66F2886C01C0026683F /* Reprodukasi.entitlements */,
 				B8B75C40285CE7EF00EA4D4C /* Utilities */,
 				B8FA609228728A6F00F02AB7 /* Model */,
 				B8B75C42285CE80200EA4D4C /* Life Cycle */,
@@ -560,6 +578,14 @@
 				B8CDAD4D2863548100200B68 /* MaterialsVC.xib */,
 			);
 			path = Materials;
+			sourceTree = "<group>";
+		};
+		B8DBC6702886C0510026683F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBC6712886C0510026683F /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B8E71AAC286EAD3B0075A4ED /* Achievement Detail */ = {
@@ -751,8 +777,18 @@
 			files = (
 				B835E0BF287FD75700812AF6 /* NotificationController.swift in Sources */,
 				B835E0BD287FD75700812AF6 /* MainTabView.swift in Sources */,
+				B8DBC6652886B0060026683F /* Challenge+CoreDataProperties.swift in Sources */,
+				B8DBC6672886B00A0026683F /* Achievement+CoreDataProperties.swift in Sources */,
+				B8532B642887BC2F00B366CC /* ReminderView.swift in Sources */,
+				B8DBC65F2886ADA50026683F /* ChallengeModel.swift in Sources */,
+				B8DBC66A2886B0270026683F /* Date+Extension.swift in Sources */,
+				B8DBC6622886AF970026683F /* Enums.swift in Sources */,
 				B835E0DB287FD99F00812AF6 /* ChallengeView.swift in Sources */,
+				B8DBC6692886B0180026683F /* AssetName.swift in Sources */,
+				B8DBC6682886B0120026683F /* AchievementModel.swift in Sources */,
 				B835E0DD287FD9AC00812AF6 /* StatisticsView.swift in Sources */,
+				B8DBC6662886B0080026683F /* Achievement+CoreDataClass.swift in Sources */,
+				B8DBC6642886B0040026683F /* Challenge+CoreDataClass.swift in Sources */,
 				B835E0C3287FD75700812AF6 /* ComplicationController.swift in Sources */,
 				B835E0BB287FD75700812AF6 /* ReprodukasiApp.swift in Sources */,
 				B835E0E2287FD9CC00812AF6 /* BadgeView.swift in Sources */,
@@ -1078,6 +1114,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Reprodukasi/Reprodukasi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6J2XDDYT2W;
@@ -1088,6 +1125,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1098,7 +1136,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1108,6 +1146,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Reprodukasi/Reprodukasi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6J2XDDYT2W;
@@ -1118,6 +1157,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1127,7 +1167,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

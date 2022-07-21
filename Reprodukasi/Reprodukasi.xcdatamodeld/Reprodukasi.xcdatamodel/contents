@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Achievement" representedClassName="Achievement" syncable="YES">
-        <attribute name="achievedImage" attributeType="String" defaultValueString=""/>
+        <attribute name="achievedImage" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="achievementId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="dateAchieved" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="desc" attributeType="String" defaultValueString=""/>
-        <attribute name="siluetteImage" attributeType="String" defaultValueString=""/>
-        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <attribute name="desc" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="siluetteImage" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="title" optional="YES" attributeType="String" defaultValueString=""/>
     </entity>
     <entity name="Challenge" representedClassName="Challenge" syncable="YES">
-        <attribute name="category" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="dateTime" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="desc" attributeType="String"/>
-        <attribute name="isFinished" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="title" attributeType="String"/>
+        <attribute name="category" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="isFinished" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
+    <configuration name="Cloud" usedWithCloudKit="YES">
+        <memberEntity name="Achievement"/>
+        <memberEntity name="Challenge"/>
+    </configuration>
+    <configuration name="Local">
+        <memberEntity name="Achievement"/>
+        <memberEntity name="Challenge"/>
+    </configuration>
     <elements>
         <element name="Achievement" positionX="-63" positionY="-18" width="128" height="119"/>
         <element name="Challenge" positionX="-63" positionY="27" width="128" height="104"/>

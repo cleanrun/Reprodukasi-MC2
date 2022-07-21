@@ -9,16 +9,18 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        
-        ChallengeView()
+        NavigationView {
+            TabView {
+                ChallengeView()
+                StatisticsView()
+            }
+        }
         
     }
 }
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
-            MainTabView()
-        }
+        MainTabView()
     }
 }

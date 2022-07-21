@@ -83,7 +83,7 @@ class CoreDataRepository {
         }
     }
     
-    func finishTodaysChallenge() {
+    func finishTodaysChallenge(completion: @escaping (() -> Void) = {}) {
         let currentDate = Date().onlyDate
         let predicate = NSPredicate(format: "dateTime = %@", currentDate! as NSDate)
         let fetchRequest: NSFetchRequest<Challenge> = Challenge.fetchRequest()
@@ -94,6 +94,7 @@ class CoreDataRepository {
             let challengeModel = results.first
             challengeModel?.setValue(true, forKey: #keyPath(Challenge.isFinished))
             AppDelegate.shared.coreDataStack.saveContext()
+            completion()
         } catch {
             print(error.localizedDescription)
         }
