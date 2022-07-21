@@ -9,7 +9,19 @@ import SwiftUI
 
 struct FinishedChallengeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Kereen!")
+                .font(.system(size: 17, weight: .bold))
+                .frame(alignment: .center)
+            
+            Image(systemName: "hourglass.circle.fill")
+                .font(.system(size: 80))
+                .foregroundColor(.green)
+            
+            Button("Tutup"){
+            }
+            
+        }
     }
 }
 

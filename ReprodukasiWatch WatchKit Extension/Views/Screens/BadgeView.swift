@@ -9,7 +9,18 @@ import SwiftUI
 
 struct BadgeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack(spacing: 5) {
+            Image("Sangat Menantang")
+                .resizable()
+                .frame(width: 80, height: 80)
+            Text("Selamat!")
+                .font(.system(size: 17, weight: .semibold))
+                .frame(alignment: .center)
+            Text("Kamu mendapatkan badges. Detail bisa dicek di aplikasi!")
+                .font(.system(size: 17, weight: .regular))
+                .multilineTextAlignment(.center)
+        }
     }
 }
 
