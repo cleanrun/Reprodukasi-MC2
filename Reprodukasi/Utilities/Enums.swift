@@ -7,6 +7,9 @@
 
 import Foundation
 
+let kRequestChallengeModel = "RequestChallengeModel"
+let kFinishTodaysChallenge = "FinishTodaysChallenge"
+
 enum AchievemetType {
     case achieved
     case notAchieved

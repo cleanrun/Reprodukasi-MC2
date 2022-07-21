@@ -6,42 +6,26 @@
 //
 
 import SwiftUI
-import Foundation
+import WatchConnectivity
 
 struct ChallengeView: View {
-    @State var totalChallenge: Int = 2;
-    @State var challengeState: Bool = false
-    var body: some View {
-        NavigationView{
-            
-            TabView {
-                ChallengeDescButton(challengeState: $challengeState)
-                    
-                StatistikView(totalChallenge: $totalChallenge)
-            }
-        }
-    }
-}
-
-struct ChallengeDescButton: View {
-    @Binding var challengeState: Bool
+    @StateObject var viewModel = ChallengeViewModel()
     
+    @State var challengeState: Bool = false
     @State var showAlert: Bool = false
     
     var body: some View {
-        
             List {
-                ZStack{
-                    NavigationLink(destination: PengingatView() .navigationTitle("Tantangan") .navigationBarTitleDisplayMode(.inline)){
-                        
-                        ZStack{
+                ZStack {
+                    NavigationLink(destination: ReminderView().navigationTitle("Tantangan") .navigationBarTitleDisplayMode(.inline)) {
+                        ZStack {
                             HStack(alignment: .top){
                                 Image(systemName: "hourglass.circle.fill")
                                 
                                 VStack(alignment: .leading, spacing: 5){
-                                    Text("Judul Tantangan")
+                                    Text((viewModel.challengeModelArray?["title"] as? String) ?? "Judul Tantangan")
                                         .font(.system(size: 17, weight: .regular))
-                                    Text("Deskripsi dari tantangan hari ini")
+                                    Text((viewModel.challengeModelArray?["desc"] as? String) ?? "Deskripsi dari tantangan hari ini")
                                         .font(.system(size: 14, weight: .regular))
                                 }
                             }.frame(width: 180, height: 75)
@@ -51,9 +35,8 @@ struct ChallengeDescButton: View {
                     }.frame(width: 180, height: 75)
                 }
                 
-                if(!challengeState) {
+                if !(viewModel.challengeModelArray?["isFinished"] as? Bool ?? false) {
                     Button("Selesai") {
-                        // BUKA SHEET/ALERT
                         showAlert.toggle()
                     }
                         .listItemTint(Color.accentColor)
@@ -73,122 +56,59 @@ struct ChallengeDescButton: View {
             .alert("Sudahkah anda melaksanakan tantangan hari ini?", isPresented: $showAlert) {
                 
                 Button("Ya"){
-                    // FUNCTION SAVE & Nampilin Badge
+                    viewModel.finishTodaysChallenge()
                 }
                 
                 Button("Tidak"){
-                    // FUNCTION BACK (UNTUK TUTUP SHEET)
                     showAlert.toggle()
                 }
 
             }
+            .onAppear {
+                viewModel.requestTodaysChallenge()
+            }
     }
 }
-
-
-struct PengingatView: View {
-    @State private var isReminder : Bool = false
-    var body: some View {
-        
-        VStack(spacing: 10) {
-            VStack(alignment: .leading, spacing: 5){
-                Text("Judul Tantangan")
-                    .font(.system(size: 17, weight: .bold))
-                Text("Deskripsi tantangan seperti apa. Jadi bisa panjang.")
-                    .font(.system(size: 17, weight: .regular))
-            }
-            ZStack{
-               RoundedRectangle(cornerRadius: 10)
-                    .fill(.white)
-                    .opacity(0.2)
-                    .frame(width: 183, height: 44)
-                HStack{
-                    Toggle(isOn: $isReminder, label: {
-                        Text("Pengingat")
-                        .font(.system(size: 17, weight: .regular))
-                    })
-                    .frame(width: 175, height: 42, alignment: .center)
-                    
-                }
-            }
-        }
-    }
-}
-
-
-struct StatistikView: View {
-    @Binding var totalChallenge: Int
-    
-    func getTotalDay() -> Int {
-        let dateComponents = DateComponents(year: 2015, month: 7)
-        let calendar = Calendar.current
-        let date = calendar.date(from: dateComponents)!
-
-        let range = calendar.range(of: .day, in: .month, for: date)!
-        let numDays = range.count
-        
-        return numDays
-    }
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Section(header:
-                Text("Progres Tantangan")
-                .bold()
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .textCase(nil)
-            ) {
-                Divider()
-                HStack(alignment: .top, spacing: 8) {
-                    Image("kalender-minggu")
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                        .foregroundColor(.gray)
-                    VStack(alignment: .leading) {
-                        Text("Minggu Ini")
-                        Text("\(totalChallenge) / 7 terselesaikan")
-                            .font(.footnote)
-                            .foregroundColor(Color.accentColor)
-                    }
-                }
-                Divider()
-                HStack(alignment: .top, spacing: 8) {
-                    Image("kalender-bulan")
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                        .foregroundColor(.gray)
-                    VStack(alignment: .leading) {
-                        Text("Bulan Ini")
-                        Text("\(totalChallenge) / \(getTotalDay()) terselesaikan")
-                            .font(.footnote)
-                            .foregroundColor(Color.accentColor)
-                    }
-                }
-            }
-            Spacer()
-           
-        }
-        .navigationBarTitle("Statistik")
-    }
-}
-
-
-
 
 struct ChallengeView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
-            ChallengeView()
-        }
+        ChallengeView()
     }
 }
 
-struct StatistikView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            StatistikView(totalChallenge: .constant(1))
-        }
+class ChallengeViewModel: NSObject, ObservableObject, WCSessionDelegate {
+    private var session: WCSession = .default
+
+    @Published var challengeModelArray: [String: Any]?
+
+    override init() {
+        super.init()
+        session.delegate = self
+        session.activate()
+    }
+    
+    func requestTodaysChallenge() {
+        challengeModelArray = nil
+        session.sendMessage(["message": kRequestChallengeModel], replyHandler: { [weak self] dict in
+            if let model = dict[kRequestChallengeModel] as? [String: Any] {
+                DispatchQueue.main.async {
+                    self?.challengeModelArray = model
+                }
+            }
+        })
+    }
+    
+    func finishTodaysChallenge() {
+        session.sendMessage(["message": kFinishTodaysChallenge], replyHandler: { [weak self] dict in
+            if let reply = dict[kFinishTodaysChallenge] as? Bool {
+                if reply {
+                    self?.requestTodaysChallenge()
+                }
+            }
+        })
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
     }
 }
-
